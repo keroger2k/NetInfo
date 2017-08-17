@@ -18,7 +18,7 @@ namespace NetInfo.Audit.Tests.Cisco.IOS.Router {
 alias exec utb_WAN OC3-POS_DISA_v7_3"
       };
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR020(device);
+      ISTIGItem item = new NET0340(device);
 
       var result = item.Compliant();
 
@@ -59,7 +59,7 @@ device attached to this IS), you consent to the following conditions:
 alias exec utb_WAN OC3-POS_DISA_v7_3"
       };
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR020(device);
+      ISTIGItem item = new NET0340(device);
 
       var result = item.Compliant();
 
@@ -100,7 +100,7 @@ device attached to this IS), you consent to the following conditions:
 alias exec utb_WAN OC3-POS_DISA_v7_3"
       };
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR020(device);
+      ISTIGItem item = new NET0340(device);
 
       var result = item.Compliant();
 

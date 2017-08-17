@@ -1,22 +1,32 @@
 ﻿using NetInfo.Devices;
+using NetInfo.Devices.IOS;
 using NetInfo.Devices.NMCI.Cisco.IOS;
 
-namespace NetInfo.Audit.Cisco.IOS.Switch {
+namespace NetInfo.Audit.Cisco.IOS.Switch
+{
 
-  /// <summary>
-  /// Ensure this command does NOT exist:  "ip bootp server"
-  /// </summary>
-  public class IS034 : ISTIGItem {
+    /// <summary>
+    /// Infrastructure Router Security Technical Implementation Guide Cisco :: Release: 23 Benchmark Date: 28 Jul 2017
+    /// 
+    /// Rule Title: BOOTP services must be disabled.
+    /// STIG ID:	NET0750     
+    /// Rule ID:	SV-3086r3_rule
+    /// Vuln ID:	V-3086       
+    /// Severity:	CAT III  Class:	Unclass
+    /// </summary>
+    public class NET0750 : ISTIGItem
+    {
 
-    public IDevice Device { get; private set; }
+        private IIOSDevice _device;
 
-    public IS034(INMCIIOSDevice device) {
-      this.Device = device;
+        public NET0750(IIOSDevice device)
+        {
+            this._device = device;
+        }
+
+        public bool Compliant()
+        {
+            return !_device.IPSettings.BootPServer;
+        }
     }
-
-    public bool Compliant() {
-      var device = (INMCIIOSDevice)Device;
-      return !device.IPSettings.BootPServer;
-    }
-  }
 }

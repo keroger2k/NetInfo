@@ -23,7 +23,20 @@ namespace NetInfo.Audit
     /// </summary>
     public interface ICiscoRouterSecurityItem : IRouterSecurityItem
     {
+      
+    }
 
+    public enum STIGClassification
+    {
+        Unclass,
+        Class
+    }
+
+    public enum STIGSeverity
+    {
+        I,
+        II,
+        III
     }
 
 }

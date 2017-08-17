@@ -15,7 +15,7 @@ namespace NetInfo.Audit.Tests.Cisco.IOS.Switch {
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IS034(device);
+      ISTIGItem item = new NET0750(device);
 
       var result = item.Compliant();
 
@@ -29,7 +29,7 @@ namespace NetInfo.Audit.Tests.Cisco.IOS.Switch {
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IS034(device);
+      ISTIGItem item = new NET0750(device);
 
       var result = item.Compliant();
 
@@ -43,7 +43,7 @@ namespace NetInfo.Audit.Tests.Cisco.IOS.Switch {
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IS034(device);
+      ISTIGItem item = new NET0750(device);
 
       var result = item.Compliant();
 

@@ -29,7 +29,7 @@ line vty 0 4
 !"
       };
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR060(device);
+      ISTIGItem item = new NET1639(device);
 
       var result = item.Compliant();
 
@@ -52,7 +52,7 @@ line vty 0 4
 !"
       };
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR060(device);
+      ISTIGItem item = new NET1639(device);
 
       var result = item.Compliant();
 
@@ -74,7 +74,7 @@ line vty 0 4
 !"
       };
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR060(device);
+      ISTIGItem item = new NET1639(device);
 
       var result = item.Compliant();
 

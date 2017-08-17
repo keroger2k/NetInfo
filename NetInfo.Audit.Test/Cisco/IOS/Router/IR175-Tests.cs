@@ -26,7 +26,7 @@ alias exec harden uNAVY-ODMN-IOSSWT-v25_0_0
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR175(device, new[] { "GOOD_MD5", "old" });
+      ISTIGItem item = new NET0230(device, new[] { "GOOD_MD5", "old" });
 
       var result = item.Compliant();
 
@@ -46,7 +46,7 @@ alias exec harden uNAVY-ODMN-IOSSWT-v25_0_0
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR175(device, new[] { "GOOD_MD5", "old" });
+      ISTIGItem item = new NET0230(device, new[] { "GOOD_MD5", "old" });
 
       var result = item.Compliant();
 

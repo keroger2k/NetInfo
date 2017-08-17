@@ -20,7 +20,7 @@ namespace NetInfo.Audit.Tests.Cisco.IOS.Router {
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR027(device);
+      ISTIGItem item = new NET0720(device);
 
       var result = item.Compliant();
 
@@ -34,7 +34,7 @@ namespace NetInfo.Audit.Tests.Cisco.IOS.Router {
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR027(device);
+      ISTIGItem item = new NET0720(device);
 
       var result = item.Compliant();
 
@@ -48,7 +48,7 @@ namespace NetInfo.Audit.Tests.Cisco.IOS.Router {
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR027(device);
+      ISTIGItem item = new NET0720(device);
 
       var result = item.Compliant();
 
@@ -63,7 +63,7 @@ service tcp-small-servers"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR027(device);
+      ISTIGItem item = new NET0720(device);
 
       var result = item.Compliant();
 
@@ -78,7 +78,7 @@ no service tcp-small-servers"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR027(device);
+      ISTIGItem item = new NET0720(device);
 
       var result = item.Compliant();
 
