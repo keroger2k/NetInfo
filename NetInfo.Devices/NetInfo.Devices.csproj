@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F38C19BA-AD3B-403E-9534-D59729533BE7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetInfo.Devices</RootNamespace>
+    <AssemblyName>NetInfo.Devices</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssetBlob.cs" />
+    <Compile Include="Brocade\BOS\BOSDevice.cs" />
+    <Compile Include="Brocade\BOS\Classes\AAASettings.cs" />
+    <Compile Include="Brocade\BOS\Classes\AccessList.cs" />
+    <Compile Include="Brocade\BOS\Classes\AliasSettings.cs" />
+    <Compile Include="Brocade\BOS\Classes\BaseSetting.cs" />
+    <Compile Include="Brocade\BOS\Classes\BOSInterface.cs" />
+    <Compile Include="Brocade\BOS\Classes\GlobalDot1x.cs" />
+    <Compile Include="Brocade\BOS\Classes\IPSSHSettings.cs" />
+    <Compile Include="Brocade\BOS\Classes\LoggingSettings.cs" />
+    <Compile Include="Brocade\BOS\Classes\Password.cs" />
+    <Compile Include="Brocade\BOS\Classes\RadiusServer.cs" />
+    <Compile Include="Brocade\BOS\Classes\SNMPSettings.cs" />
+    <Compile Include="Brocade\BOS\Classes\SNTPSettings.cs" />
+    <Compile Include="Brocade\BOS\Classes\TacacsSettings.cs" />
+    <Compile Include="Brocade\BOS\Classes\UserSettings.cs" />
+    <Compile Include="Brocade\BOS\Classes\Vlan.cs" />
+    <Compile Include="Brocade\BOS\Classes\WebManagement.cs" />
+    <Compile Include="Brocade\BOS\Commands\ShowDot1x.cs" />
+    <Compile Include="Brocade\BOS\Commands\ShowInterfaceBrief.cs" />
+    <Compile Include="Brocade\BOS\Commands\ShowInterfaces.cs" />
+    <Compile Include="Brocade\BOS\Commands\ShowSnmpUser.cs" />
+    <Compile Include="Brocade\BOS\Commands\ShowVersion.cs" />
+    <Compile Include="Brocade\BOS\Commands\ShowVlan.cs" />
+    <Compile Include="Brocade\BOS\Commands\WriteMem.cs" />
+    <Compile Include="Brocade\BOS\IBOSDevice.cs" />
+    <Compile Include="Cisco\IDS\Commands\ShowUsersAll.cs" />
+    <Compile Include="Cisco\IDS\IDSDevice.cs" />
+    <Compile Include="Cisco\IDS\IIDSDevice.cs" />
+    <Compile Include="Cisco\IOS\Classes\AAASettings.cs" />
+    <Compile Include="Cisco\IOS\Classes\AccessList.cs" />
+    <Compile Include="Cisco\IOS\Classes\AliasExecSettings.cs" />
+    <Compile Include="Cisco\IOS\Classes\BaseSetting.cs" />
+    <Compile Include="Cisco\IOS\Classes\BorderGatewayProtocol.cs" />
+    <Compile Include="Cisco\IOS\Classes\Commands\DirAllFileSystems.cs" />
+    <Compile Include="Cisco\IOS\Classes\Commands\ShowCdpInterface.cs" />
+    <Compile Include="Cisco\IOS\Classes\Commands\ShowCdpNeighbor.cs" />
+    <Compile Include="Cisco\IOS\Classes\Commands\ShowClock.cs" />
+    <Compile Include="Cisco\IOS\Classes\Commands\ShowInterfaces.cs" />
+    <Compile Include="Cisco\IOS\Classes\Commands\ShowInterfaceStatus.cs" />
+    <Compile Include="Cisco\IOS\Classes\Commands\ShowInterfacesTrunk.cs" />
+    <Compile Include="Cisco\IOS\Classes\Commands\ShowInventory.cs" />
+    <Compile Include="Cisco\IOS\Classes\Commands\ShowIpInterface.cs" />
+    <Compile Include="Cisco\IOS\Classes\Commands\ShowSnmp.cs" />
+    <Compile Include="Cisco\IOS\Classes\Commands\ShowSnmpGroup.cs" />
+    <Compile Include="Cisco\IOS\Classes\Commands\ShowSnmpUser.cs" />
+    <Compile Include="Cisco\IOS\Classes\Commands\ShowVersion.cs" />
+    <Compile Include="Cisco\IOS\Classes\Commands\ShowVtpPassword.cs" />
+    <Compile Include="Cisco\IOS\Classes\Commands\ShowVtpStatus.cs" />
+    <Compile Include="Cisco\IOS\Classes\Commands\WriteMem.cs" />
+    <Compile Include="Cisco\IOS\Classes\CryptoSettings.cs" />
+    <Compile Include="Cisco\IOS\Classes\Dot1xSettings.cs" />
+    <Compile Include="Cisco\IOS\Classes\EnhancedInteriorGatewayRoutingProtocol.cs" />
+    <Compile Include="Cisco\IOS\Classes\Interfaces\IOSInterface.cs" />
+    <Compile Include="Cisco\IOS\Classes\IOS7Crypt.cs" />
+    <Compile Include="Cisco\IOS\Classes\IOSClock.cs" />
+    <Compile Include="Cisco\IOS\Classes\IOSImage.cs" />
+    <Compile Include="Cisco\IOS\Classes\IOSLineItem.cs" />
+    <Compile Include="Cisco\IOS\Classes\IOSPassword.cs" />
+    <Compile Include="Cisco\IOS\Classes\IOSRadiusServer.cs" />
+    <Compile Include="Cisco\IOS\Classes\IPSettings.cs" />
+    <Compile Include="Cisco\IOS\Classes\LoggingSettings.cs" />
+    <Compile Include="Cisco\IOS\Classes\MonitorSettings.cs" />
+    <Compile Include="Cisco\IOS\Classes\NTPSettings.cs" />
+    <Compile Include="Cisco\IOS\Classes\OpenShortestPathFirstProtocol.cs" />
+    <Compile Include="Cisco\IOS\Classes\RouteMap.cs" />
+    <Compile Include="Cisco\IOS\Classes\ServiceSettings.cs" />
+    <Compile Include="Cisco\IOS\Classes\SNMPSettings.cs" />
+    <Compile Include="Cisco\IOS\Classes\SpanningTreeSettings.cs" />
+    <Compile Include="Cisco\IOS\Classes\TacacsSettings.cs" />
+    <Compile Include="Cisco\IOS\Classes\Users.cs" />
+    <Compile Include="Cisco\IOS\Classes\Vlan.cs" />
+    <Compile Include="Cisco\IOS\Enums\LineType.cs" />
+    <Compile Include="Cisco\IOS\Enums\PasswordType.cs" />
+    <Compile Include="Cisco\IOS\IIOSDevice.cs" />
+    <Compile Include="Cisco\IOS\IOSDevice.cs" />
+    <Compile Include="Cisco\IOS\Patterns\IOSRegex.Designer.cs" />
+    <Compile Include="Classes\Generic.Designer.cs" />
+    <Compile Include="Classes\IConfigSetting.cs" />
+    <Compile Include="Classes\StandardAccessList.cs" />
+    <Compile Include="Device.cs" />
+    <Compile Include="IAssetBlob.cs" />
+    <Compile Include="IDevice.cs" />
+    <Compile Include="Infrastructure\Enums\HeaderDeviceTypes.cs" />
+    <Compile Include="Infrastructure\ExtensionMethods\Helpers.cs" />
+    <Compile Include="Infrastructure\Helpers\IPHelper.cs" />
+    <Compile Include="Juniper\ScreenOS\Classes\AdminSettings.cs" />
+    <Compile Include="Juniper\ScreenOS\Classes\AlgSettings.cs" />
+    <Compile Include="Juniper\ScreenOS\Classes\BaseSetting.cs" />
+    <Compile Include="Juniper\ScreenOS\Classes\ClockSettings.cs" />
+    <Compile Include="Juniper\ScreenOS\Classes\ConsoleSettings.cs" />
+    <Compile Include="Juniper\ScreenOS\Classes\FlowSettings.cs" />
+    <Compile Include="Juniper\ScreenOS\Classes\IKESettings.cs" />
+    <Compile Include="Juniper\ScreenOS\Classes\InterfaceSettings.cs" />
+    <Compile Include="Juniper\ScreenOS\Classes\NTPSettings.cs" />
+    <Compile Include="Juniper\ScreenOS\Classes\PKISettings.cs" />
+    <Compile Include="Juniper\ScreenOS\Classes\ScreenOSInterface.cs" />
+    <Compile Include="Juniper\ScreenOS\Classes\SNMPSettings.cs" />
+    <Compile Include="Juniper\ScreenOS\Classes\SSLSettings.cs" />
+    <Compile Include="Juniper\ScreenOS\Classes\XAuthSettings.cs" />
+    <Compile Include="Juniper\ScreenOS\Commands\GetLicense.cs" />
+    <Compile Include="Juniper\ScreenOS\Commands\GetRoute.cs" />
+    <Compile Include="Juniper\ScreenOS\IScreenOSDevice.cs" />
+    <Compile Include="Juniper\ScreenOS\Patterns\ScreenOSRegex.Designer.cs" />
+    <Compile Include="Juniper\ScreenOS\ScreenOSDevice.cs" />
+    <Compile Include="McAfee\Classes\BaseSetting.cs" />
+    <Compile Include="McAfee\Classes\ManagerConfig.cs" />
+    <Compile Include="McAfee\Classes\PeerManagerConfig.cs" />
+    <Compile Include="McAfee\Classes\SensorInfoConfig.cs" />
+    <Compile Include="McAfee\Classes\SensorNetworkConfig.cs" />
+    <Compile Include="McAfee\IMcafeeDevice.cs" />
+    <Compile Include="McAfee\McafeeDevice.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Riverbed\RIOS\Classes\AAASettings.cs" />
+    <Compile Include="Riverbed\RIOS\Classes\BaseSetting.cs" />
+    <Compile Include="Riverbed\RIOS\Classes\JobSettings.cs" />
+    <Compile Include="Riverbed\RIOS\Classes\NTPServerSettings.cs" />
+    <Compile Include="Riverbed\RIOS\Classes\SNMPSettings.cs" />
+    <Compile Include="Riverbed\RIOS\Classes\SSHSettings.cs" />
+    <Compile Include="Riverbed\RIOS\Classes\TacacsSettings.cs" />
+    <Compile Include="Riverbed\RIOS\Classes\UserSettings.cs" />
+    <Compile Include="Riverbed\RIOS\Classes\WEBSettings.cs" />
+    <Compile Include="Riverbed\RIOS\Commands\ShowBoot.cs" />
+    <Compile Include="Riverbed\RIOS\Commands\ShowInfo.cs" />
+    <Compile Include="Riverbed\RIOS\Commands\ShowInterfaceBrief.cs" />
+    <Compile Include="Riverbed\RIOS\Commands\ShowVersion.cs" />
+    <Compile Include="Riverbed\RIOS\IRIOSDevice.cs" />
+    <Compile Include="Riverbed\RIOS\RIOSDevice.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Cisco\IOS\Patterns\IOSRegex.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\Generic.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Juniper\ScreenOS\Patterns\ScreenOSRegex.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Cisco\IDS\Classes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

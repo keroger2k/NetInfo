@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72F27065-A6C4-4531-8758-99C919497FA0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetInfo.Audit.Test</RootNamespace>
+    <AssemblyName>NetInfo.Audit.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.7.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.7.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Brocade\BOS\Switch\BS000-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS001-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS002-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS003-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS004-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS005-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS006-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS007-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS008-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS009-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS010-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS011-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS012-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS013-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS014-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS015-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS016-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS017-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS018-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS019-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS020-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS022-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS023-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS024-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS025-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS026-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS027-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS028-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS029-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS030-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS031-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS032-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS033-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS034-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS035-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS036-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS037-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS038-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS039-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS040-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS041-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS042-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS043-Tests.cs" />
+    <Compile Include="Brocade\BOS\Switch\BS044-Tests.cs" />
+    <Compile Include="Cisco\IOS\IDS\ID001-Tests.cs" />
+    <Compile Include="Cisco\IOS\IDS\ID004-Tests.cs" />
+    <Compile Include="Cisco\IOS\IDS\ID006-Tests.cs" />
+    <Compile Include="Cisco\IOS\IDS\ID009-Tests.cs" />
+    <Compile Include="Cisco\IOS\IDS\ID011-Tests.cs" />
+    <Compile Include="Cisco\IOS\IDS\ID014-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR000-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR001-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR002-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR006-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR007-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR008-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR009-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR010-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR012-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR013-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR014-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR015-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR018-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR020-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR021-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR022-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR023-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR024-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR025-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR026-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR027-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR028-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR029-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR030-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR032-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR033-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR034-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR036-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR037-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR038-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR039-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR040-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR041-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR042-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR043-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR044-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR045-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR047-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR048-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR049-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR050-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR052-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR053-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR054-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR055-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR056-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR057-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR058-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR059-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR060-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR061-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR064-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR065-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR066-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR067-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR068-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR070-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR071-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR079-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR080-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR087-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR088-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR093-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR094-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR096-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR099-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR100-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR101-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR102-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR103-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR105-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR108-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR109-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR116-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR123-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR124-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR125-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR129-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR130-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR133-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR135-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR137-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR156-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR157-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR162-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR163-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR165-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR167-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR168-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR169-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR170-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR173-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR174-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR175-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR176-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR177-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR178-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR179-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR180-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR181-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR182-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR183-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR184-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR185-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR186-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR187-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR188-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR189-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR190-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR191-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR196-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR197-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR199-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR200-Tests.cs" />
+    <Compile Include="Cisco\IOS\Router\IR201-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS000-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS006-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS007-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS012-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS013-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS014-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS018-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS020-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS021-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS022-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS023-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS024-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS025-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS027-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS028-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS029-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS030-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS032-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS033-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS034-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS036-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS038-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS040-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS042-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS049-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS053-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS055-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS056-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS057-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS058-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS059-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS060-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS061-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS064-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS065-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS066-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS067-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS068-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS071-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS075-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS082-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS083-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS090-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS092-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS093-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS100-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS102-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS103-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS107-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS109-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS112-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS113Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS114-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS115-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS118-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS119-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS120-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS122-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS123-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS124-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS125-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS126-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS127-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS128-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS129-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS130-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS131-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS132-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS134-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS137-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS138-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS140-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS141-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS142-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS145-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS146-Tests.cs" />
+    <Compile Include="Cisco\IOS\Switch\IS147-Tests.cs" />
+    <Compile Include="Helpers\ConfigurationHelper.cs" />
+    <Compile Include="Juniper\ScreenOS\VP000-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP001-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP002-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP003-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP004-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP005-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP006-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP010-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP011-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP012-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP013-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP015-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP016-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP017-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP018-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP019-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP020-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP022-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP023-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP024-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP025-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP027-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP035-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP037-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP038-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP056-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP058-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP060-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP064-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP065-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP067-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP068-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP071-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP072-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP073-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP074-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP075-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP077-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP078-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP079-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP080-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP083-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP084-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP086-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP087-Tests.cs" />
+    <Compile Include="Juniper\ScreenOS\VP115-Tests.cs" />
+    <Compile Include="McAfee\IP000-Tests.cs" />
+    <Compile Include="McAfee\IP003-Tests.cs" />
+    <Compile Include="McAfee\IP006-Tests.cs" />
+    <Compile Include="McAfee\IP007-Tests.cs" />
+    <Compile Include="McAfee\IP008-Tests.cs" />
+    <Compile Include="McAfee\IP009-Tests.cs" />
+    <Compile Include="McAfee\IP010-Tests.cs" />
+    <Compile Include="McAfee\IP011-Tests.cs" />
+    <Compile Include="McAfee\IP012-Tests.cs" />
+    <Compile Include="McAfee\IP013-Tests.cs" />
+    <Compile Include="McAfee\IP014-Tests.cs" />
+    <Compile Include="McAfee\IP015-Tests.cs" />
+    <Compile Include="McAfee\IP016-Tests.cs" />
+    <Compile Include="McAfee\IP017-Tests.cs" />
+    <Compile Include="McAfee\IP018-Tests.cs" />
+    <Compile Include="McAfee\IP019-Tests.cs" />
+    <Compile Include="McAfee\IP020-Tests.cs" />
+    <Compile Include="McAfee\IP021-Tests.cs" />
+    <Compile Include="McAfee\IP022-Tests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Riverbed\RIOS\RB000-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB003-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB005-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB006-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB007-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB008-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB009-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB010-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB011-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB012-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB020-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB021-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB022-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB023-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB029-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB030-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB038-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB041-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB042-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB043-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB044-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB049-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB050-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB052-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB053-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB054-Tests.cs" />
+    <Compile Include="Riverbed\RIOS\RB055-Tests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetInfo.Audit\NetInfo.Audit.csproj">
+      <Project>{36f896d2-ad73-4772-9d78-25c209108ca0}</Project>
+      <Name>NetInfo.Audit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetInfo.Devices.NMCI\NetInfo.Devices.NMCI.csproj">
+      <Project>{e96a2d28-e1bb-4906-933f-f12a14d0632e}</Project>
+      <Name>NetInfo.Devices.NMCI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetInfo.Devices\NetInfo.Devices.csproj">
+      <Project>{f38c19ba-ad3b-403e-9534-d59729533be7}</Project>
+      <Name>NetInfo.Devices</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -48,5 +48,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetInfo.Audit\NetInfo.Audit.csproj">
+      <Project>{36f896d2-ad73-4772-9d78-25c209108ca0}</Project>
+      <Name>NetInfo.Audit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetInfo.Devices\NetInfo.Devices.csproj">
+      <Project>{f38c19ba-ad3b-403e-9534-d59729533be7}</Project>
+      <Name>NetInfo.Devices</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

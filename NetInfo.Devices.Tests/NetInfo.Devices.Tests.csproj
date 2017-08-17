@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{20F2F0BB-83E7-4751-BA5D-564CCCAAA68B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetInfo.Devices.Tests</RootNamespace>
+    <AssemblyName>NetInfo.Devices.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.1.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.1.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FakeItEasy, Version=3.4.2.0, Culture=neutral, PublicKeyToken=eff28e2146d5fd2c, processorArchitecture=MSIL">
+      <HintPath>..\packages\FakeItEasy.3.4.2\lib\net45\FakeItEasy.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.7.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.7.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Brocade\BOS\BOSDeviceTest.cs" />
+    <Compile Include="Brocade\BOS\Classes\AliasSettingsTests.cs" />
+    <Compile Include="Brocade\BOS\Classes\BOSInterfaceTests.cs" />
+    <Compile Include="Brocade\BOS\Classes\BOSIPSSHSettingsTests.cs" />
+    <Compile Include="Brocade\BOS\Classes\BOSWebManagementTests.cs" />
+    <Compile Include="Brocade\BOS\Classes\ShowDot1xTests.cs" />
+    <Compile Include="Brocade\BOS\Classes\ShowInterfaceBriefTests.cs" />
+    <Compile Include="Brocade\BOS\Classes\ShowInterfaceTests.cs" />
+    <Compile Include="Brocade\BOS\Classes\ShowSnmpUserTests.cs" />
+    <Compile Include="Brocade\BOS\Classes\ShowVersionTests.cs" />
+    <Compile Include="Brocade\BOS\Classes\ShowVlanTests.cs" />
+    <Compile Include="Brocade\BOS\Classes\SNTPSettingsTests.cs" />
+    <Compile Include="Cisco\IDS\IDSDeviceTest.cs" />
+    <Compile Include="Cisco\IDS\ShowUsersAllTests.cs" />
+    <Compile Include="Cisco\IOS\AAASettingsTests.cs" />
+    <Compile Include="Cisco\IOS\BGPTests.cs" />
+    <Compile Include="Cisco\IOS\DeviceExtensionMethodsTests.cs" />
+    <Compile Include="Cisco\IOS\DirAllFileSystemsTests.cs" />
+    <Compile Include="Cisco\IOS\EIGRPTests.cs" />
+    <Compile Include="Cisco\IOS\IOS7Crypt.cs" />
+    <Compile Include="Cisco\IOS\IOSClockTests.cs" />
+    <Compile Include="Cisco\IOS\IOSDeviceTest.cs" />
+    <Compile Include="Cisco\IOS\IOSInterfaceTests.cs" />
+    <Compile Include="Cisco\IOS\IPSettingsTests.cs" />
+    <Compile Include="Cisco\IOS\LoggingTests.cs" />
+    <Compile Include="Cisco\IOS\MonitorSettingsTests.cs" />
+    <Compile Include="Cisco\IOS\NetworkTimeProtocolTests.cs" />
+    <Compile Include="Cisco\IOS\OSPFTests.cs" />
+    <Compile Include="Cisco\IOS\RCMDSettingsTests.cs" />
+    <Compile Include="Cisco\IOS\RouteMapTests.cs" />
+    <Compile Include="Cisco\IOS\ServiceSettingsTests.cs" />
+    <Compile Include="Cisco\IOS\ShowCdpInterfaceTests.cs" />
+    <Compile Include="Cisco\IOS\ShowCdpNeighborsTests.cs" />
+    <Compile Include="Cisco\IOS\ShowInterfaceStatusTests.cs" />
+    <Compile Include="Cisco\IOS\ShowInterfaceTests.cs" />
+    <Compile Include="Cisco\IOS\ShowInventoryTests.cs" />
+    <Compile Include="Cisco\IOS\ShowIpInterfaceTests.cs" />
+    <Compile Include="Cisco\IOS\ShowSnmpGroupTests.cs" />
+    <Compile Include="Cisco\IOS\ShowSnmpUserTests.cs" />
+    <Compile Include="Cisco\IOS\ShowVersionTests.cs" />
+    <Compile Include="Cisco\IOS\ShowVtpPasswordTests.cs" />
+    <Compile Include="Cisco\IOS\ShowVtpStatusTests.cs" />
+    <Compile Include="Cisco\IOS\SNMPSettingsTests.cs" />
+    <Compile Include="Cisco\IOS\SwitchPortSettingsTests.cs" />
+    <Compile Include="Cisco\IOS\TacacsServerTests.cs" />
+    <Compile Include="Classes\AssetBlobTests.cs" />
+    <Compile Include="Classes\StandardAccessListTests.cs" />
+    <Compile Include="Helpers\ConfigurationHelper.cs" />
+    <Compile Include="Juniper\ScreenOS\AdminSettingsTests.cs" />
+    <Compile Include="Juniper\ScreenOS\ClockSettingsTests.cs" />
+    <Compile Include="Juniper\ScreenOS\FlowSettingsTests.cs" />
+    <Compile Include="Juniper\ScreenOS\GetRouteTests.cs" />
+    <Compile Include="Juniper\ScreenOS\IKESettingsTests.cs" />
+    <Compile Include="Juniper\ScreenOS\PKISettingsTests.cs" />
+    <Compile Include="Juniper\ScreenOS\ScreenOSDeviceTest.cs" />
+    <Compile Include="Juniper\ScreenOS\ScreenOSInterfaceTests.cs" />
+    <Compile Include="Juniper\ScreenOS\SNMPSettingsTests.cs" />
+    <Compile Include="Juniper\ScreenOS\XAuthSettingsTests.cs" />
+    <Compile Include="McAfee\ManagerConfigTests.cs" />
+    <Compile Include="McAfee\McAfeeDeviceTests.cs" />
+    <Compile Include="McAfee\PeerManagerConfigTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Riverbed\RIOS\Classes\JobSettingsTests.cs" />
+    <Compile Include="Riverbed\RIOS\Classes\NTPSettingsTests.cs" />
+    <Compile Include="Riverbed\RIOS\Classes\SNMPSettingsTests.cs" />
+    <Compile Include="Riverbed\RIOS\Classes\SSHSettingsTests.cs" />
+    <Compile Include="Riverbed\RIOS\Classes\TacacsSettingsTests.cs" />
+    <Compile Include="Riverbed\RIOS\Classes\UserSettingsTests.cs" />
+    <Compile Include="Riverbed\RIOS\Classes\WebSettingsTests.cs" />
+    <Compile Include="Riverbed\RIOS\Commands\ShowBootTests.cs" />
+    <Compile Include="Riverbed\RIOS\Commands\ShowInterfaceBriefTests.cs" />
+    <Compile Include="Riverbed\RIOS\Commands\ShowVersionTests.cs" />
+    <Compile Include="Riverbed\RIOS\RIOSDeviceTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetInfo.Devices\NetInfo.Devices.csproj">
+      <Project>{f38c19ba-ad3b-403e-9534-d59729533be7}</Project>
+      <Name>NetInfo.Devices</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

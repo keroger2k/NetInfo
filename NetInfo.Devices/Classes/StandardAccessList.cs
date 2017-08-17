@@ -1,0 +1,2 @@
+﻿namespace NetInfo.Devices.Classes {
+}
