@@ -65,6 +65,17 @@ namespace NetInfo.Parse
                 results.Count(c => c.Item1.Equals("FAILING", StringComparison.CurrentCultureIgnoreCase))
              ));
 
+            foreach(var device in results.Where(c => c.Item1.Equals("FAILING", StringComparison.CurrentCultureIgnoreCase)).Take(5))
+            {
+                Debug.WriteLine(string.Format("Failing Device: {0}", device.Item2));
+            }
+
+            foreach (var device in results.Where(c => c.Item1.Equals("PASSING", StringComparison.CurrentCultureIgnoreCase)).Take(5))
+            {
+                Debug.WriteLine(string.Format("Passing Device: {0}", device.Item2));
+            }
+
+
         }
     }
 }

@@ -44,7 +44,7 @@ ip classless"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR001(device);
+      ISTIGItem item = new NET0400(device);
 
       var result = item.Compliant();
 
@@ -77,7 +77,7 @@ ip classless"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR001(device);
+      ISTIGItem item = new NET0400(device);
 
       var result = item.Compliant();
 
@@ -112,7 +112,7 @@ ip classless"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR001(device);
+      ISTIGItem item = new NET0400(device);
 
       var result = item.Compliant();
 
@@ -142,7 +142,7 @@ ip classless"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR001(device);
+      ISTIGItem item = new NET0400(device);
 
       var result = item.Compliant();
 
@@ -181,7 +181,7 @@ ip classless"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR001(device);
+      ISTIGItem item = new NET0400(device);
 
       var result = item.Compliant();
 

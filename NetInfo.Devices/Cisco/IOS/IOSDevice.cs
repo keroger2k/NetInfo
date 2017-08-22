@@ -158,7 +158,7 @@ namespace NetInfo.Devices.IOS {
       get {
         if (_hostname == null) {
           var match = GetConfigurationSetting(new Regex(IOSRegex.IOS_HOSTNAME, RegexOptions.IgnoreCase));
-          _hostname = (match == null) ? null : match.Groups[1].Value;
+          _hostname = (match == null) ? "ERROR" : match.Groups[1].Value;
         }
         return _hostname;
       }
