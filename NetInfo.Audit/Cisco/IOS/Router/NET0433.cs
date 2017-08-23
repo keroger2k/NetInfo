@@ -29,7 +29,14 @@ namespace NetInfo.Audit.Cisco.IOS.Router
 
         public bool Compliant()
         {
-            return _device.TacacsServer.Hosts.Count() > 1;
+            bool result = false;
+            if (_device.TacacsServer.Hosts.Count() > 1)
+                result = true;
+            if (_device.AAA.Groups.Where(c => c.GroupServerType == Devices.Cisco.IOS.AAASettings.GroupServerSettings.AAAGroupServerTypes.tacacsPlus).Any())
+                result = _device.AAA.Groups
+                    .Where(c => c.GroupServerType == Devices.Cisco.IOS.AAASettings.GroupServerSettings.AAAGroupServerTypes.tacacsPlus)
+                    .ElementAt(0).ServerAliases.Count() > 1;
+            return result; ;
         }
     }
 }
