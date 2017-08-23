@@ -36,7 +36,7 @@ router bgp 65000
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR002(device);
+      ISTIGItem item = new NET0408(device);
 
       var result = item.Compliant();
 
@@ -70,7 +70,7 @@ router bgp 65000
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR002(device);
+      ISTIGItem item = new NET0408(device);
 
       var result = item.Compliant();
 
@@ -103,7 +103,7 @@ router bgp 65000
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR002(device);
+      ISTIGItem item = new NET0408(device);
 
       var result = item.Compliant();
 
@@ -136,7 +136,7 @@ router bgp 65204
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR002(device);
+      ISTIGItem item = new NET0408(device);
 
       var result = item.Compliant();
 
@@ -168,7 +168,7 @@ router bgp 65204
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR002(device);
+      ISTIGItem item = new NET0408(device);
 
       var result = item.Compliant();
 

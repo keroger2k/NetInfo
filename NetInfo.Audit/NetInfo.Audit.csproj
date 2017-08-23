@@ -95,8 +95,8 @@
     <Compile Include="Cisco\IOS\IDS\ID014.cs" />
     <Compile Include="Cisco\IOS\Router\IR000.cs" />
     <Compile Include="Cisco\IOS\Router\NET0400.cs" />
-    <Compile Include="Cisco\IOS\Router\IR002.cs" />
-    <Compile Include="Cisco\IOS\Router\IR003.cs" />
+    <Compile Include="Cisco\IOS\Router\NET0408.cs" />
+    <Compile Include="Cisco\IOS\Router\NET0412.cs" />
     <Compile Include="Cisco\IOS\Router\IR004.cs" />
     <Compile Include="Cisco\IOS\Router\IR006.cs" />
     <Compile Include="Cisco\IOS\Router\IR007.cs" />
@@ -202,7 +202,7 @@
     <Compile Include="Cisco\IOS\Router\IR174.cs" />
     <Compile Include="Cisco\IOS\Router\NET0230.cs" />
     <Compile Include="Cisco\IOS\Router\IR176.cs" />
-    <Compile Include="Cisco\IOS\Router\IR177.cs" />
+    <Compile Include="Cisco\IOS\Router\NET0405.cs" />
     <Compile Include="Cisco\IOS\Router\IR178.cs" />
     <Compile Include="Cisco\IOS\Router\NET0820.cs" />
     <Compile Include="Cisco\IOS\Router\IR180.cs" />
