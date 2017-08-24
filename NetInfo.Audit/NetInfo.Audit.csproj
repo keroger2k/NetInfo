@@ -98,8 +98,8 @@
     <Compile Include="Cisco\IOS\Router\NET0408.cs" />
     <Compile Include="Cisco\IOS\Router\NET0412.cs" />
     <Compile Include="Cisco\IOS\Router\IR004.cs" />
-    <Compile Include="Cisco\IOS\Router\IR006.cs" />
-    <Compile Include="Cisco\IOS\Router\IR007.cs" />
+    <Compile Include="Cisco\IOS\Router\NET0744.cs" />
+    <Compile Include="Cisco\IOS\Router\NET0812.cs" />
     <Compile Include="Cisco\IOS\Router\IR008.cs" />
     <Compile Include="Cisco\IOS\Router\IR009.cs" />
     <Compile Include="Cisco\IOS\Router\IR010.cs" />
@@ -119,7 +119,7 @@
     <Compile Include="Cisco\IOS\Router\NET0722.cs" />
     <Compile Include="Cisco\IOS\Router\NET0724.cs" />
     <Compile Include="Cisco\IOS\Router\NET0726.cs" />
-    <Compile Include="Cisco\IOS\Router\IR031.cs" />
+    <Compile Include="Cisco\IOS\Router\NET0728.cs" />
     <Compile Include="Cisco\IOS\Router\NET0730.cs" />
     <Compile Include="Cisco\IOS\Router\NET0740.cs" />
     <Compile Include="Cisco\IOS\Router\NET0750.cs" />
