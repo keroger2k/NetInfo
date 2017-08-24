@@ -1,9 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using NetInfo.Devices;
-using NetInfo.Devices.Cisco.IOS;
-using NetInfo.Devices.NMCI.Cisco.IOS;
+﻿using NetInfo.Devices.Cisco.IOS;
 using NetInfo.Devices.IOS;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace NetInfo.Audit.Cisco.IOS.Router
 {

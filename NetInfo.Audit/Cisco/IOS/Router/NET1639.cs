@@ -1,9 +1,7 @@
-﻿using System.Linq;
-using System.Text.RegularExpressions;
-using NetInfo.Devices;
-using NetInfo.Devices.Cisco.IOS.Enums;
-using NetInfo.Devices.NMCI.Cisco.IOS;
+﻿using NetInfo.Devices.Cisco.IOS.Enums;
 using NetInfo.Devices.IOS;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace NetInfo.Audit.Cisco.IOS.Router
 {

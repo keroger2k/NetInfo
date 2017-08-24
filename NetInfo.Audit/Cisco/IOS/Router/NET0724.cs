@@ -6,23 +6,25 @@ namespace NetInfo.Audit.Cisco.IOS.Router
     /// <summary>
     /// Infrastructure Router Security Technical Implementation Guide Cisco :: Release: 23 Benchmark Date: 28 Jul 2017
     /// 
-    /// Rule Title:  The network element must have DNS servers defined if it is configured as a client resolver.
-    /// STIG ID:	NET0820     
-    /// Rule ID:	SV-15330r2_rule
-    /// Vuln ID:	V-3020
+    /// Rule Title:   Network devices must have TCP Keep-Alives enabled for TCP sessions.
+    /// STIG ID:	NET0724     
+    /// Rule ID:	SV-5615r3_rule
+    /// Vuln ID:	V-5615       
     /// Severity:	CAT III  Class:	Unclass
     /// </summary>
-    public class NET0820 : ICiscoRouterSecurityItem
+    public class NET0724 : ICiscoRouterSecurityItem
     {
+
         private IIOSDevice _device;
-        public NET0820(IIOSDevice device)
+
+        public NET0724(IIOSDevice device)
         {
             this._device = device;
         }
 
         public bool Compliant()
         {
-            return !_device.IPSettings.DomainLookup;
+            return _device.ServiceSettings.TcpKeepalivesIn && _device.ServiceSettings.TcpKeepalivesOut;
         }
     }
 }

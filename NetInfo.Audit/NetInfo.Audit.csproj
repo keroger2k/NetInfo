@@ -116,9 +116,9 @@
     <Compile Include="Cisco\IOS\Router\NET0600.cs" />
     <Compile Include="Cisco\IOS\Router\IR026.cs" />
     <Compile Include="Cisco\IOS\Router\NET0720.cs" />
-    <Compile Include="Cisco\IOS\Router\IR028.cs" />
-    <Compile Include="Cisco\IOS\Router\IR029.cs" />
-    <Compile Include="Cisco\IOS\Router\IR030.cs" />
+    <Compile Include="Cisco\IOS\Router\NET0722.cs" />
+    <Compile Include="Cisco\IOS\Router\NET0724.cs" />
+    <Compile Include="Cisco\IOS\Router\NET0726.cs" />
     <Compile Include="Cisco\IOS\Router\IR031.cs" />
     <Compile Include="Cisco\IOS\Router\NET0730.cs" />
     <Compile Include="Cisco\IOS\Router\NET0740.cs" />

@@ -21,7 +21,7 @@ service tcp-keepalives-out"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR029(device);
+      ISTIGItem item = new NET0724(device);
 
       var result = item.Compliant();
 
@@ -35,7 +35,7 @@ service tcp-keepalives-out"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR029(device);
+      ISTIGItem item = new NET0724(device);
 
       var result = item.Compliant();
 
@@ -49,7 +49,7 @@ service tcp-keepalives-out"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR029(device);
+      ISTIGItem item = new NET0724(device);
 
       var result = item.Compliant();
 
@@ -63,7 +63,7 @@ service tcp-keepalives-out"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR029(device);
+      ISTIGItem item = new NET0724(device);
 
       var result = item.Compliant();
 

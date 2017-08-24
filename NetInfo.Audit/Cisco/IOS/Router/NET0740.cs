@@ -1,7 +1,4 @@
-﻿using System;
-using NetInfo.Devices;
-using NetInfo.Devices.IOS;
-using NetInfo.Devices.NMCI.Cisco.IOS;
+﻿using NetInfo.Devices.IOS;
 
 namespace NetInfo.Audit.Cisco.IOS.Router
 {
@@ -9,7 +6,8 @@ namespace NetInfo.Audit.Cisco.IOS.Router
     /// <summary>
     /// Infrastructure Router Security Technical Implementation Guide Cisco :: Release: 23 Benchmark Date: 28 Jul 2017
     /// 
-    /// Rule Title: The network element must have HTTP service for administrative access disabled.    /// STIG ID:	NET0740     
+    /// Rule Title: The network element must have HTTP service for administrative access disabled.
+    /// STIG ID:	NET0740     
     /// Rule ID:	SV-41467r1_rule
     /// Vuln ID:	V-3085       
     /// Severity:	CAT II  Class:	Unclass
