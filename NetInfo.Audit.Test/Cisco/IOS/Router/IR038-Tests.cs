@@ -20,7 +20,7 @@ namespace NetInfo.Audit.Tests.Cisco.IOS.Router {
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR038(device);
+      ISTIGItem item = new NET0781(device);
 
       var result = item.Compliant();
 
@@ -34,7 +34,7 @@ namespace NetInfo.Audit.Tests.Cisco.IOS.Router {
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR038(device);
+      ISTIGItem item = new NET0781(device);
 
       var result = item.Compliant();
 
@@ -48,7 +48,7 @@ namespace NetInfo.Audit.Tests.Cisco.IOS.Router {
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR038(device);
+      ISTIGItem item = new NET0781(device);
 
       var result = item.Compliant();
 

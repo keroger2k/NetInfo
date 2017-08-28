@@ -19,7 +19,7 @@ ntp server 1.1.1.1
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0812(device, new Dictionary<string, int> { { "ABCD", 1 } });
+      ISTIGItem item = new NET0812(device);
 
       var result = item.Compliant();
 
@@ -36,7 +36,7 @@ sntp server 1.1.1.1
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0812(device, new Dictionary<string, int> { { "ABCD", 1 } });
+      ISTIGItem item = new NET0812(device);
 
       var result = item.Compliant();
 
@@ -52,7 +52,7 @@ hostname ABCD-U01-AS-01
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0812(device, new Dictionary<string, int> { { "ABCD", 1 } });
+      ISTIGItem item = new NET0812(device);
 
       var result = item.Compliant();
 
@@ -68,7 +68,7 @@ hostname ABCD-U00-IR-01
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0812(device, new Dictionary<string, int> { { "ABCD", 1 } });
+      ISTIGItem item = new NET0812(device);
 
       var result = item.Compliant();
 
@@ -85,7 +85,7 @@ ntp server 1.1.1.1
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0812(device, new Dictionary<string, int> { { "ABCD", 1 } });
+      ISTIGItem item = new NET0812(device);
 
       var result = item.Compliant();
 
@@ -103,7 +103,7 @@ ntp server 1.1.1.2
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0812(device, new Dictionary<string, int> { { "ABCD", 1 } });
+      ISTIGItem item = new NET0812(device);
 
       var result = item.Compliant();
 
@@ -119,7 +119,7 @@ hostname ABCD-U00-OR-01
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0812(device, new Dictionary<string, int> { { "ABCD", 1 } });
+      ISTIGItem item = new NET0812(device);
 
       var result = item.Compliant();
 
@@ -136,7 +136,7 @@ ntp server 1.1.1.1
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0812(device, new Dictionary<string, int> { { "ABCD", 1 } });
+      ISTIGItem item = new NET0812(device);
 
       var result = item.Compliant();
 
@@ -154,7 +154,7 @@ ntp server 1.1.1.2
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0812(device, new Dictionary<string, int> { { "ABCD", 1 } });
+      ISTIGItem item = new NET0812(device);
 
       var result = item.Compliant();
 
@@ -172,7 +172,7 @@ ntp server 1.1.1.2
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0812(device, new Dictionary<string, int> { { "ABCD", 1 } });
+      ISTIGItem item = new NET0812(device);
 
       var result = item.Compliant();
 

@@ -108,7 +108,6 @@
     <Compile Include="Cisco\IOS\Router\IR018-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR020-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR021-Tests.cs" />
-    <Compile Include="Cisco\IOS\Router\IR022-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR023-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR024-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR025-Tests.cs" />

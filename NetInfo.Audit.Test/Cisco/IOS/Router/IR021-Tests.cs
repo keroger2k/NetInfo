@@ -17,7 +17,7 @@ aaa authentication enable default group tacacs+ enable
 !"
       };
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR021(device);
+      ISTIGItem item = new NET1623(device);
 
       var result = item.Compliant();
 
@@ -31,7 +31,7 @@ aaa authentication enable default group tacacs+ enable
 !"
       };
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR021(device);
+      ISTIGItem item = new NET1623(device);
 
       var result = item.Compliant();
 
@@ -47,7 +47,7 @@ aaa authentication enable default group radius enable
 !"
       };
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR021(device);
+      ISTIGItem item = new NET1623(device);
 
       var result = item.Compliant();
 

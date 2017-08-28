@@ -22,7 +22,7 @@ interface GigabitEthernet3/2
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR013(device);
+      ISTIGItem item = new NETVLAN007(device);
 
       var result = item.Compliant();
 
@@ -57,7 +57,7 @@ interface FastEthernet6/2
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR013(device);
+      ISTIGItem item = new NETVLAN007(device);
 
       var result = item.Compliant();
 
@@ -79,7 +79,7 @@ interface GigabitEthernet3/2
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR013(device);
+      ISTIGItem item = new NETVLAN007(device);
 
       var result = item.Compliant();
 
@@ -101,7 +101,7 @@ interface GigabitEthernet3/2
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR013(device);
+      ISTIGItem item = new NETVLAN007(device);
 
       var result = item.Compliant();
 
@@ -124,7 +124,7 @@ interface GigabitEthernet3/2
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR013(device);
+      ISTIGItem item = new NETVLAN007(device);
 
       var result = item.Compliant();
 
@@ -148,7 +148,7 @@ interface GigabitEthernet3/2
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR013(device);
+      ISTIGItem item = new NETVLAN007(device);
 
       var result = item.Compliant();
 

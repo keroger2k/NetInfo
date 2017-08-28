@@ -35,7 +35,7 @@ no cdp run
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR010(device);
+      ISTIGItem item = new NET1020(device);
 
       var result = item.Compliant();
 
@@ -61,7 +61,7 @@ no cdp run
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR010(device);
+      ISTIGItem item = new NET1020(device);
 
       var result = item.Compliant();
 
@@ -95,7 +95,7 @@ logging trap notifications
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR010(device);
+      ISTIGItem item = new NET1020(device);
 
       var result = item.Compliant();
 
@@ -119,7 +119,7 @@ no cdp run
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR010(device);
+      ISTIGItem item = new NET1020(device);
 
       var result = item.Compliant();
 
@@ -159,7 +159,7 @@ no cdp run
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR010(device);
+      ISTIGItem item = new NET1020(device);
 
       var result = item.Compliant();
 
@@ -200,7 +200,7 @@ no cdp run
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR010(device);
+      ISTIGItem item = new NET1020(device);
 
       var result = item.Compliant();
 
@@ -241,7 +241,7 @@ no cdp run
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR010(device);
+      ISTIGItem item = new NET1020(device);
 
       var result = item.Compliant();
 
@@ -292,7 +292,7 @@ line vty 5 15
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR010(device);
+      ISTIGItem item = new NET1020(device);
 
       var result = item.Compliant();
 
@@ -342,7 +342,7 @@ line vty 5 15
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR010(device);
+      ISTIGItem item = new NET1020(device);
 
       var result = item.Compliant();
 

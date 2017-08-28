@@ -45,7 +45,7 @@ router eigrp 1
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR015(device);
+      ISTIGItem item = new NET0400EIGRP(device);
 
       var result = item.Compliant();
 
@@ -88,7 +88,7 @@ router eigrp 1
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR015(device);
+      ISTIGItem item = new NET0400EIGRP(device);
 
       var result = item.Compliant();
 
@@ -132,7 +132,7 @@ router eigrp 1
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR015(device);
+      ISTIGItem item = new NET0400EIGRP(device);
 
       var result = item.Compliant();
 

@@ -44,7 +44,7 @@ QUAN-UB1-EO-01#!"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR037(device);
+      ISTIGItem item = new NET0780(device);
 
       var result = item.Compliant();
 
@@ -86,7 +86,7 @@ QUAN-UB1-EO-01#!"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR037(device);
+      ISTIGItem item = new NET0780(device);
 
       var result = item.Compliant();
 

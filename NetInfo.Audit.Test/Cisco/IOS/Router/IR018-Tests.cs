@@ -33,7 +33,7 @@ ABCD-U00-IR-01#!
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR018(device);
+      ISTIGItem item = new NET1660(device);
 
       var result = item.Compliant();
 
@@ -65,7 +65,7 @@ ABCD-U00-IR-01#!
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR018(device);
+      ISTIGItem item = new NET1660(device);
 
       var result = item.Compliant();
 
@@ -97,7 +97,7 @@ ABCD-U00-IR-01#!
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR018(device);
+      ISTIGItem item = new NET1660(device);
 
       var result = item.Compliant();
 
@@ -129,7 +129,7 @@ ABCD-U00-IR-01#!
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR018(device);
+      ISTIGItem item = new NET1660(device);
 
       var result = item.Compliant();
 
@@ -161,7 +161,7 @@ ABCD-U00-IR-01#!
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR018(device);
+      ISTIGItem item = new NET1660(device);
 
       var result = item.Compliant();
 
@@ -196,7 +196,7 @@ PRLH-U00-BI-01#!
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR018(device);
+      ISTIGItem item = new NET1660(device);
 
       var result = item.Compliant();
 
@@ -231,7 +231,7 @@ PRLH-U00-BI-01#!
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR018(device);
+      ISTIGItem item = new NET1660(device);
 
       var result = item.Compliant();
 
@@ -251,7 +251,7 @@ snmp-server host 10.16.27.62 informs version 3 priv nmsops
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR018(device);
+      ISTIGItem item = new NET1660(device);
 
       var result = item.Compliant();
 
@@ -271,7 +271,7 @@ snmp-server host 10.16.27.62 informs version 3 priv nmsops
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR018(device);
+      ISTIGItem item = new NET1660(device);
 
       var result = item.Compliant();
 
@@ -291,7 +291,7 @@ snmp-server host 10.16.27.62 informs version 3 priv nmsops
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR018(device);
+      ISTIGItem item = new NET1660(device);
 
       var result = item.Compliant();
 
@@ -311,7 +311,7 @@ snmp-server host 10.16.27.62 informs version 3 priv nmsops
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR018(device);
+      ISTIGItem item = new NET1660(device);
 
       var result = item.Compliant();
 
@@ -331,7 +331,7 @@ snmp-server host 10.16.27.62 informs version 3 auth nmsops
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR018(device);
+      ISTIGItem item = new NET1660(device);
 
       var result = item.Compliant();
 
@@ -349,7 +349,7 @@ PRLH-URB-OR-01#!
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR018(device);
+      ISTIGItem item = new NET1660(device);
 
       var result = item.Compliant();
 

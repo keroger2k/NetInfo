@@ -16,7 +16,7 @@ username localadmin privilege 0 password 7 12355644545C1D3C6B0D767D62713552
 !"
       };
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR024(device);
+      ISTIGItem item = new NET0470(device);
 
       var result = item.Compliant();
 
@@ -31,7 +31,7 @@ username localadmin privilege 1 password 7 12355644545C1D3C6B0D767D62713552
 !"
       };
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR024(device);
+      ISTIGItem item = new NET0470(device);
 
       var result = item.Compliant();
 
@@ -45,7 +45,7 @@ username localadmin privilege 1 password 7 12355644545C1D3C6B0D767D62713552
 !"
       };
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR024(device);
+      ISTIGItem item = new NET0470(device);
 
       var result = item.Compliant();
 

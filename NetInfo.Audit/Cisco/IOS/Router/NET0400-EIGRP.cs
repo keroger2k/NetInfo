@@ -1,4 +1,6 @@
-﻿using NetInfo.Devices.IOS;
+﻿using NetInfo.Devices.Infrastructure.ExtensionMethods;
+using NetInfo.Devices.IOS;
+using System;
 using System.Linq;
 
 namespace NetInfo.Audit.Cisco.IOS.Router
@@ -13,23 +15,19 @@ namespace NetInfo.Audit.Cisco.IOS.Router
     /// Vuln ID:	V-3034       
     /// Severity:	CAT II  Class:	Unclass
     /// </summary>
-    public class NET0400 : ICiscoRouterSecurityItem
+    public class NET0400EIGRP : ICiscoRouterSecurityItem
     {
-
         private IIOSDevice _device;
-        public NET0400(IIOSDevice device)
+
+        public NET0400EIGRP(IIOSDevice device)
         {
             this._device = device;
         }
 
         public bool Compliant()
         {
-            bool result = true;
-            if(_device.IsOSPFConfigured)
-            {
-                result = _device.OSPF.AuthenticaionDigestAreas.Any(c => c == 0);
-            }
-            return result;
+            var eigrpInterface = _device.GetCoveredInterfaces().Where(c => !c.Shutdown);
+            return eigrpInterface.All(c => c.IP.EIGRP.Mode.Equals("md5", StringComparison.OrdinalIgnoreCase));
         }
     }
 }

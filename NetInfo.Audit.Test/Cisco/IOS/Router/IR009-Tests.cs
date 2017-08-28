@@ -25,7 +25,7 @@ ntp source Vlan30
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR009(device);
+      ISTIGItem item = new NET0899(device);
 
       var result = item.Compliant();
 
@@ -48,7 +48,7 @@ ntp source Loopback0
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR009(device);
+      ISTIGItem item = new NET0899(device);
 
       var result = item.Compliant();
 
@@ -82,7 +82,7 @@ ntp source Loopback0
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR009(device);
+      ISTIGItem item = new NET0899(device);
 
       var result = item.Compliant();
 
@@ -112,7 +112,7 @@ ntp source Vlan99
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR009(device);
+      ISTIGItem item = new NET0899(device);
 
       var result = item.Compliant();
 
@@ -143,7 +143,7 @@ ntp source Vlan30
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR009(device);
+      ISTIGItem item = new NET0899(device);
 
       var result = item.Compliant();
 
@@ -172,7 +172,7 @@ ntp source BVI99
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR009(device);
+      ISTIGItem item = new NET0899(device);
 
       var result = item.Compliant();
 
@@ -201,7 +201,7 @@ ntp source loopback0
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR009(device);
+      ISTIGItem item = new NET0899(device);
 
       var result = item.Compliant();
 

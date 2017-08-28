@@ -39,7 +39,7 @@ logging trap notifications
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR008(device);
+      ISTIGItem item = new NET0897(device);
 
       var result = item.Compliant();
 
@@ -62,7 +62,7 @@ ip tacacs source-interface loopback0
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR008(device);
+      ISTIGItem item = new NET0897(device);
 
       var result = item.Compliant();
 
@@ -89,7 +89,7 @@ ip tacacs source-interface Vlan30
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR008(device);
+      ISTIGItem item = new NET0897(device);
 
       var result = item.Compliant();
 
@@ -116,7 +116,7 @@ ip tacacs source-interface Vlan99
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR008(device);
+      ISTIGItem item = new NET0897(device);
 
       var result = item.Compliant();
 
@@ -140,7 +140,7 @@ ip tacacs source-interface Vlan30
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR008(device);
+      ISTIGItem item = new NET0897(device);
 
       var result = item.Compliant();
 
@@ -174,7 +174,7 @@ ip tacacs source-interface Loopback0
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR008(device);
+      ISTIGItem item = new NET0897(device);
 
       var result = item.Compliant();
 
@@ -205,7 +205,7 @@ ip tacacs source-interface Loopback0
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR008(device);
+      ISTIGItem item = new NET0897(device);
 
       var result = item.Compliant();
 
@@ -250,7 +250,7 @@ ip tacacs source-interface GigabitEthernet0/2
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR008(device);
+      ISTIGItem item = new NET0897(device);
 
       var result = item.Compliant();
 
@@ -280,7 +280,7 @@ ip tacacs source-interface Vlan99
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR008(device);
+      ISTIGItem item = new NET0897(device);
 
       var result = item.Compliant();
 
@@ -314,7 +314,7 @@ ip tacacs source-interface Vlan99
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR008(device);
+      ISTIGItem item = new NET0897(device);
 
       var result = item.Compliant();
 
@@ -344,7 +344,7 @@ ip tacacs source-interface Vlan30
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR008(device);
+      ISTIGItem item = new NET0897(device);
 
       var result = item.Compliant();
 
@@ -372,7 +372,7 @@ ip tacacs source-interface BVI99
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR008(device);
+      ISTIGItem item = new NET0897(device);
 
       var result = item.Compliant();
 
@@ -403,7 +403,7 @@ ip tacacs source-interface BVI100
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR008(device);
+      ISTIGItem item = new NET0897(device);
 
       var result = item.Compliant();
 
@@ -435,7 +435,7 @@ ip tacacs source-interface BVI100
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR008(device);
+      ISTIGItem item = new NET0897(device);
 
       var result = item.Compliant();
 
@@ -463,7 +463,7 @@ ip tacacs source-interface loopback0
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR008(device);
+      ISTIGItem item = new NET0897(device);
 
       var result = item.Compliant();
 
