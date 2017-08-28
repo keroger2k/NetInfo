@@ -30,7 +30,7 @@ DANI-U01-DH-01#"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR014(device);
+      ISTIGItem item = new NETVLAN008(device);
 
       var result = item.Compliant();
 

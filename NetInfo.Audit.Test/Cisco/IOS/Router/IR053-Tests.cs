@@ -23,7 +23,7 @@ ABCD-U00-IR-01#!"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR053(device);
+      ISTIGItem item = new NETVLAN004(device);
 
       var result = item.Compliant();
 
@@ -45,7 +45,7 @@ PNDL-U08-DP-06#!"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR053(device);
+      ISTIGItem item = new NETVLAN004(device);
 
       var result = item.Compliant();
 
@@ -74,7 +74,7 @@ ALBY-U00-IS-03#!"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR053(device);
+      ISTIGItem item = new NETVLAN004(device);
 
       var result = item.Compliant();
 
@@ -103,7 +103,7 @@ ALBY-U00-IS-03#!"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR053(device);
+      ISTIGItem item = new NETVLAN004(device);
 
       var result = item.Compliant();
 
@@ -133,7 +133,7 @@ ANND-U03-AS-03#!"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR053(device);
+      ISTIGItem item = new NETVLAN004(device);
 
       var result = item.Compliant();
 

@@ -1,11 +1,12 @@
 ﻿using NetInfo.Audit.Cisco.IOS.Router;
 using NetInfo.Devices;
-using NetInfo.Devices.NMCI.Cisco.IOS;
+using NetInfo.Devices.IOS;
 using NUnit.Framework;
 
-namespace NetInfo.Audit.Tests.Cisco.IOS.Router {
+namespace NetInfo.Audit.Tests.Cisco.IOS.Router
+{
 
-  [TestFixture]
+    [TestFixture]
   public class IR012_Tests {
     private AssetBlob blob;
 
@@ -29,8 +30,8 @@ interface GigabitEthernet3/2
 "
       };
 
-      INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0230(device);
+      IIOSDevice device = new IOSDevice(blob);
+      ISTIGItem item = new NETVLAN005(device);
 
       var result = item.Compliant();
 
@@ -53,8 +54,8 @@ interface GigabitEthernet3/2
 "
       };
 
-      INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0230(device);
+      IIOSDevice device = new IOSDevice(blob);
+      ISTIGItem item = new NETVLAN005(device);
 
       var result = item.Compliant();
 
@@ -77,8 +78,8 @@ interface GigabitEthernet3/2
 "
       };
 
-      INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0230(device);
+      IIOSDevice device = new IOSDevice(blob);
+      ISTIGItem item = new NETVLAN005(device);
 
       var result = item.Compliant();
 
@@ -100,8 +101,8 @@ interface GigabitEthernet3/2
 "
       };
 
-      INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0230(device);
+      IIOSDevice device = new IOSDevice(blob);
+      ISTIGItem item = new NETVLAN005(device);
 
       var result = item.Compliant();
 
@@ -123,8 +124,8 @@ interface GigabitEthernet3/2
 "
       };
 
-      INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0230(device);
+      IIOSDevice device = new IOSDevice(blob);
+      ISTIGItem item = new NETVLAN005(device);
 
       var result = item.Compliant();
 
@@ -145,8 +146,8 @@ interface GigabitEthernet3/2
 "
       };
 
-      INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0230(device);
+      IIOSDevice device = new IOSDevice(blob);
+      ISTIGItem item = new NETVLAN005(device);
 
       var result = item.Compliant();
 

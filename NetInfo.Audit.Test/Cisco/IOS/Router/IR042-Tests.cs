@@ -9,16 +9,14 @@ namespace NetInfo.Audit.Tests.Cisco.IOS.Router {
   public class IR042_Tests {
 
     [Test]
-    public void IR042_should_return_true_when_snmp_server_group_has_allowed_access_groups_applied_67_68_69_() {
+    public void IR042_should_return_true_when_snmp_server_group_has_allowed_access_groups_applied_60_() {
       var blob = new AssetBlob {
         Body = @"!
-snmp-server group nmcigroup v3 auth write NMS notify *tv.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF7F access 67
-snmp-server group nmcigroup v3 auth write NMS notify *tv.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF7F access 68
-snmp-server group nmcigroup v3 priv write NMS notify *tv.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF0F access 69
+snmp-server group nmcigroup v3 auth write NMS notify *tv.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF7F access 60
 !"
       };
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR042(device);
+      ISTIGItem item = new NET0890(device);
 
       var result = item.Compliant();
 
@@ -35,7 +33,7 @@ snmp-server group nmcigroup v3 priv write NMS notify *tv.FFFFFFFF.FFFFFFFF.FFFFF
 !"
       };
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR042(device);
+      ISTIGItem item = new NET0890(device);
 
       var result = item.Compliant();
 
@@ -52,14 +50,14 @@ QUAN-U07-AS-27#show snmp user
 
 User name: nmsops
 Engine ID: 00000063000100A28A9C7DE0
-storage-type: nonvolatile	 active	access-list: 69
+storage-type: nonvolatile	 active	access-list: 60
 Authentication Protocol: MD5
 Privacy Protocol: DES
 Group-name: nmcigroup
 
 User name: nmciuser
 Engine ID: 00000063000100A28A9C7DE0
-storage-type: nonvolatile	 active	access-list: 69
+storage-type: nonvolatile	 active	access-list: 60
 Authentication Protocol: MD5
 Privacy Protocol: None
 Group-name: nmcigroup
@@ -68,7 +66,7 @@ QUAN-U07-AS-27#!
 "
       };
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR042(device);
+      ISTIGItem item = new NET0890(device);
 
       var result = item.Compliant();
 
@@ -101,7 +99,7 @@ QUAN-U07-AS-27#!
 "
       };
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR042(device);
+      ISTIGItem item = new NET0890(device);
 
       var result = item.Compliant();
 
@@ -118,7 +116,7 @@ PRLH-URB-OR-01#!
 "
       };
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR042(device);
+      ISTIGItem item = new NET0890(device);
 
       var result = item.Compliant();
 

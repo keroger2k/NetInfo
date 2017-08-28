@@ -1,4 +1,5 @@
-﻿using NetInfo.Devices.IOS;
+﻿using System.Linq;
+using NetInfo.Devices.IOS;
 using System.Text.RegularExpressions;
 
 namespace NetInfo.Audit.Cisco.IOS.Router
@@ -15,7 +16,7 @@ namespace NetInfo.Audit.Cisco.IOS.Router
     public class NET0897 : ICiscoRouterSecurityItem
     {
         private IIOSDevice _device;
-        private Regex _sourceInterfaceRegex = new Regex(@"Loopback\d+");
+        private Regex _sourceInterfaceRegex = new Regex(@"(?<sourceInterface>[Ll]oopback\d+)");
 
         public NET0897(IIOSDevice device)
         {
@@ -24,7 +25,11 @@ namespace NetInfo.Audit.Cisco.IOS.Router
 
         public bool Compliant()
         {
-            return _sourceInterfaceRegex.Match(_device.IPSettings.TacacsSourceInterface).Success;
+            string loopbackName = _sourceInterfaceRegex.Match(_device.IPSettings.TacacsSourceInterface).Groups["sourceInterface"].ToString();
+
+            var srcInterface = _device.Interfaces.FirstOrDefault(c => c.ShortName.Equals(loopbackName, System.StringComparison.CurrentCultureIgnoreCase));
+
+            return srcInterface != null && srcInterface.Address != null;
         }
     }
 }

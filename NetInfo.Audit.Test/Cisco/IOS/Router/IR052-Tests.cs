@@ -41,7 +41,7 @@ interface Vlan30
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR052(device);
+      ISTIGItem item = new NETVLAN004(device);
 
       var result = item.Compliant();
 
@@ -75,7 +75,7 @@ interface Vlan30
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR052(device);
+      ISTIGItem item = new NETVLAN004(device);
 
       var result = item.Compliant();
 
@@ -110,7 +110,7 @@ interface Vlan30
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR052(device);
+      ISTIGItem item = new NETVLAN004(device);
 
       var result = item.Compliant();
 

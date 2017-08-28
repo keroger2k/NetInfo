@@ -25,7 +25,7 @@ line vty 5 15
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR057(device);
+      ISTIGItem item = new NET1637(device);
 
       var result = item.Compliant();
 
@@ -42,30 +42,12 @@ line vty 5 15
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR057(device);
+      ISTIGItem item = new NET1637(device);
 
       var result = item.Compliant();
 
       Assert.False(result);
     }
-
-    [Test]
-    public void IR057_should_return_false_when_access_class_is_not_applied_to_access_list_99() {
-      blob = new AssetBlob {
-        Body = @"!
-line vty 0 4
-  access-class 1 in
-line vty 5 15
-  access-class 1 in
-!"
-      };
-
-      INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR057(device);
-
-      var result = item.Compliant();
-
-      Assert.False(result);
-    }
+    
   }
 }

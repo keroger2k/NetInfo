@@ -45,7 +45,7 @@ ABCD-U00-IR-01#!"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR045(device);
+      ISTIGItem item = new NET0949(device);
 
       var result = item.Compliant();
 
@@ -89,7 +89,7 @@ ABCD-U00-IR-01#!"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR045(device);
+      ISTIGItem item = new NET0949(device);
 
       var result = item.Compliant();
 
@@ -132,7 +132,7 @@ BANG-UST-OR-01#!"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR045(device);
+      ISTIGItem item = new NET0949(device);
 
       var result = item.Compliant();
 

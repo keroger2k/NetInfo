@@ -21,7 +21,7 @@ ip ssh time-out 30
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR048(device);
+      ISTIGItem item = new NET0965(device);
 
       var result = item.Compliant();
 
@@ -41,7 +41,7 @@ ip ssh time-out 30
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR048(device);
+      ISTIGItem item = new NET0965(device);
 
       var result = item.Compliant();
 

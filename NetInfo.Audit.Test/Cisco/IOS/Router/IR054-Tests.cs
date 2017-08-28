@@ -23,7 +23,7 @@ line con 0
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR054(device);
+      ISTIGItem item = new NET1629(device);
 
       var result = item.Compliant();
 
@@ -44,7 +44,7 @@ line aux 0
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR054(device);
+      ISTIGItem item = new NET1629(device);
 
       var result = item.Compliant();
 
@@ -64,7 +64,7 @@ line aux 0
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR054(device);
+      ISTIGItem item = new NET1629(device);
 
       var result = item.Compliant();
 
@@ -84,7 +84,7 @@ line aux 0
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR054(device);
+      ISTIGItem item = new NET1629(device);
 
       var result = item.Compliant();
 
@@ -103,7 +103,7 @@ line aux 0
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR054(device);
+      ISTIGItem item = new NET1629(device);
 
       var result = item.Compliant();
 
@@ -125,7 +125,7 @@ line aux 0
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR054(device);
+      ISTIGItem item = new NET1629(device);
 
       var result = item.Compliant();
 
@@ -145,7 +145,7 @@ line aux 0
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR054(device);
+      ISTIGItem item = new NET1629(device);
 
       var result = item.Compliant();
 

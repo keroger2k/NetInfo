@@ -1,17 +1,21 @@
 ﻿using NetInfo.Audit.Cisco.IOS.Router;
 using NetInfo.Devices;
-using NetInfo.Devices.NMCI.Cisco.IOS;
+using NetInfo.Devices.IOS;
 using NUnit.Framework;
 
-namespace NetInfo.Audit.Tests.Cisco.IOS.Router {
+namespace NetInfo.Audit.Tests.Cisco.IOS.Router
+{
 
-  [TestFixture]
-  public class IR002_Tests {
+    [TestFixture]
+    public class IR002_Tests
+    {
 
-    [Test]
-    public void IR002_should_return_true_when_all_bgp_neighbors_have_passwords_configured() {
-      var blob = new AssetBlob {
-        Body = @"!
+        [Test]
+        public void IR002_should_return_true_when_all_bgp_neighbors_have_passwords_configured()
+        {
+            var blob = new AssetBlob
+            {
+                Body = @"!
 router bgp 65000
  no synchronization
  bgp log-neighbor-changes
@@ -33,20 +37,22 @@ router bgp 65000
  neighbor 214.40.148.53 filter-list 10 out
  no auto-summary
 !"
-      };
+            };
 
-      INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0408(device);
+            IIOSDevice device = new IOSDevice(blob);
+            ISTIGItem item = new NET0408(device);
 
-      var result = item.Compliant();
+            var result = item.Compliant();
 
-      Assert.True(result);
-    }
+            Assert.True(result);
+        }
 
-    [Test]
-    public void IR002_should_return_false_when_not_all_bgp_neighbors_have_passwords_configured() {
-      var blob = new AssetBlob {
-        Body = @"!
+        [Test]
+        public void IR002_should_return_false_when_not_all_bgp_neighbors_have_passwords_configured()
+        {
+            var blob = new AssetBlob
+            {
+                Body = @"!
 router bgp 65000
  no synchronization
  bgp log-neighbor-changes
@@ -67,20 +73,22 @@ router bgp 65000
  neighbor 214.40.148.53 filter-list 10 out
  no auto-summary
 !"
-      };
+            };
 
-      INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0408(device);
+            IIOSDevice device = new IOSDevice(blob);
+            ISTIGItem item = new NET0408(device);
 
-      var result = item.Compliant();
+            var result = item.Compliant();
 
-      Assert.False(result);
-    }
+            Assert.False(result);
+        }
 
-    [Test]
-    public void IR002_should_return_true_when_remote_as_701_is_not_configured_with_a_password() {
-      var blob = new AssetBlob {
-        Body = @"!
+        [Test]
+        public void IR002_should_return_false_when_remote_as_701_is_not_configured_with_a_password()
+        {
+            var blob = new AssetBlob
+            {
+                Body = @"!
 router bgp 65000
  no synchronization
  bgp log-neighbor-changes
@@ -100,20 +108,22 @@ router bgp 65000
  neighbor 214.40.148.53 filter-list 10 out
  no auto-summary
 !"
-      };
+            };
 
-      INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0408(device);
+            IIOSDevice device = new IOSDevice(blob);
+            ISTIGItem item = new NET0408(device);
 
-      var result = item.Compliant();
+            var result = item.Compliant();
 
-      Assert.True(result);
-    }
+            Assert.False(result);
+        }
 
-    [Test]
-    public void IR002_should_return_true_when_peer_groups_are_used_and_a_password_is_correctly_configured() {
-      var blob = new AssetBlob {
-        Body = @"!
+        [Test]
+        public void IR002_should_return_true_when_peer_groups_are_used_and_a_password_is_correctly_configured()
+        {
+            var blob = new AssetBlob
+            {
+                Body = @"!
 !
 router bgp 65204
  no synchronization
@@ -133,20 +143,22 @@ router bgp 65204
  no auto-summary
 !
 !"
-      };
+            };
 
-      INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0408(device);
+            IIOSDevice device = new IOSDevice(blob);
+            ISTIGItem item = new NET0408(device);
 
-      var result = item.Compliant();
+            var result = item.Compliant();
 
-      Assert.True(result);
-    }
+            Assert.True(result);
+        }
 
-    [Test]
-    public void IR002_should_return_false_when_peer_groups_are_used_and_a_password_is_not_correctly_configured() {
-      var blob = new AssetBlob {
-        Body = @"!
+        [Test]
+        public void IR002_should_return_false_when_peer_groups_are_used_and_a_password_is_not_correctly_configured()
+        {
+            var blob = new AssetBlob
+            {
+                Body = @"!
 !
 router bgp 65204
  no synchronization
@@ -165,14 +177,14 @@ router bgp 65204
  no auto-summary
 !
 !"
-      };
+            };
 
-      INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new NET0408(device);
+            IIOSDevice device = new IOSDevice(blob);
+            ISTIGItem item = new NET0408(device);
 
-      var result = item.Compliant();
+            var result = item.Compliant();
 
-      Assert.False(result);
+            Assert.False(result);
+        }
     }
-  }
 }

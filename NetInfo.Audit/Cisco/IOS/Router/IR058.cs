@@ -1,29 +1,32 @@
-﻿using System.Linq;
-using NetInfo.Devices;
-using NetInfo.Devices.Cisco.IOS.Enums;
-using NetInfo.Devices.NMCI.Cisco.IOS;
+﻿using NetInfo.Devices.Cisco.IOS.Enums;
+using NetInfo.Devices.IOS;
+using System.Linq;
 
-namespace NetInfo.Audit.Cisco.IOS.Router {
+namespace NetInfo.Audit.Cisco.IOS.Router
+{
+    /// <summary>
+    /// Infrastructure Router Security Technical Implementation Guide Cisco :: Release: 23 Benchmark Date: 28 Jul 2017
+    /// 
+    /// Rule Title:  Network devices must be password protected.
+    /// STIG ID:	NET0230     
+    /// Rule ID:	SV-3012r4_rule
+    /// Vuln ID:	V-3012       
+    /// Severity:	CAT I  Class:	Unclass
+    /// </summary>
+    public class IR058 : ICiscoRouterSecurityItem
+    {
+        private IIOSDevice _device;
 
-  /// <summary>
-  /// Ensure VTY lines 0 - 4 are configured with this command: "transport input ssh" (see comment)
-  ///
-  /// Exceptions:
-  ///   Devices not running an IOS k9 image, do not support the SSH protocol and managed devices will be configured with "tranport input telnet";
-  ///   if the device is non-managed, "line vty 0 4" should be configured with: "tranport input none".
-  /// </summary>
-  public class IR058 : ISTIGItem {
+        public IR058(IIOSDevice device)
+        {
+            this._device = device;
+        }
 
-    public IDevice Device { get; private set; }
-
-    public IR058(INMCIIOSDevice device) {
-      this.Device = device;
+        public bool Compliant()
+        {
+            var line = _device.Lines.SingleOrDefault(c => c.Type == LineType.VTY &&
+              c.Name.Equals("line vty 0 4", System.StringComparison.OrdinalIgnoreCase));
+            return (line != null) ? line.Commands.Any(c => c.Trim().Equals("transport input ssh")) : true;
+        }
     }
-
-    public bool Compliant() {
-      var line = ((INMCIIOSDevice)Device).Lines.SingleOrDefault(c => c.Type == LineType.VTY &&
-        c.Name.Equals("line vty 0 4", System.StringComparison.OrdinalIgnoreCase));
-      return (line != null) ? line.Commands.Any(c => c.Trim().Equals("transport input ssh")) : true;
-    }
-  }
 }

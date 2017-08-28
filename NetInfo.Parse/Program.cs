@@ -50,7 +50,7 @@ namespace NetInfo.Parse
         private static void CheckItem(Type t)
         {
             List<Tuple<string, string>> results = new List<Tuple<string, string>>();
-            Debug.WriteLine(string.Format("\nProcessing configurations for STIG {0}",t.ToString()));
+            //Debug.WriteLine(string.Format("\nProcessing configurations for STIG {0}",t.ToString()));
             foreach (var asset in _assets)
             {
                 var device = new IOSDevice(asset);
@@ -60,22 +60,21 @@ namespace NetInfo.Parse
                //     Debug.WriteLine(string.Format("Device: {0} is {1}", device.Hostname, query.Compliant() ? "PASSING" : "FAILING"));
             }
 
-            Debug.WriteLine(string.Format("Finished Processing.\n\tPassing: {0}\n\tFailing: {1}", 
+            Debug.WriteLine(string.Format("{0},{1},{2}",
+                t.ToString(),
                 results.Count(c => c.Item1.Equals("PASSING", StringComparison.CurrentCultureIgnoreCase)),
                 results.Count(c => c.Item1.Equals("FAILING", StringComparison.CurrentCultureIgnoreCase))
              ));
 
-            foreach(var device in results.Where(c => c.Item1.Equals("FAILING", StringComparison.CurrentCultureIgnoreCase)).Take(5))
-            {
-                Debug.WriteLine(string.Format("Failing Device: {0}", device.Item2));
-            }
+            //foreach(var device in results.Where(c => c.Item1.Equals("FAILING", StringComparison.CurrentCultureIgnoreCase)).Take(5))
+            //{
+            //    Debug.WriteLine(string.Format("Failing Device: {0}", device.Item2));
+            //}
 
-            foreach (var device in results.Where(c => c.Item1.Equals("PASSING", StringComparison.CurrentCultureIgnoreCase)).Take(5))
-            {
-                Debug.WriteLine(string.Format("Passing Device: {0}", device.Item2));
-            }
-
-
+            //foreach (var device in results.Where(c => c.Item1.Equals("PASSING", StringComparison.CurrentCultureIgnoreCase)).Take(5))
+            //{
+            //    Debug.WriteLine(string.Format("Passing Device: {0}", device.Item2));
+            //}
         }
     }
 }
