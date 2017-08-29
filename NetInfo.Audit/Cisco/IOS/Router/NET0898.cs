@@ -26,6 +26,8 @@ namespace NetInfo.Audit.Cisco.IOS.Router
 
         public bool Compliant()
         {
+            if (_device.SyslogSettings.SourceInterface == null) return false;
+
             string loopbackName = _sourceInterfaceRegex.Match(_device.SyslogSettings.SourceInterface).Groups["sourceInterface"].ToString();
 
             var srcInterface = _device.Interfaces.FirstOrDefault(c => c.ShortName.Equals(loopbackName, System.StringComparison.CurrentCultureIgnoreCase));

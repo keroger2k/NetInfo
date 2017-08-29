@@ -33,7 +33,7 @@ shutdown
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR067(device);
+      ISTIGItem item = new NETVLAN002(device);
 
       var result = item.Compliant();
 
@@ -59,37 +59,7 @@ shutdown
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR067(device);
-
-      var result = item.Compliant();
-
-      Assert.False(result);
-    }
-
-    [Test]
-    public void IR067_should_return_false_when_not_all_physical_interfaces_that_are_disabled_are_assigned_to_vlan_2_and_not_default_vlan_1() {
-      var blob = new AssetBlob {
-        Body = @"!
-interface GigabitEthernet3/30
-switchport access vlan 3
-shutdown
-!
-interface GigabitEthernet3/31
-switchport access vlan 3
-shutdown
-!
-interface GigabitEthernet3/32
-switchport access vlan 3
-shutdown
-!
-interface GigabitEthernet3/33
-switchport access vlan 3
-shutdown
-!"
-      };
-
-      INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR067(device);
+      ISTIGItem item = new NETVLAN002(device);
 
       var result = item.Compliant();
 

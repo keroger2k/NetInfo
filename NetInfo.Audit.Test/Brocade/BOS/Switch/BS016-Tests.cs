@@ -254,66 +254,66 @@ SSH@JAXS-U03-AS-08#
       Assert.True(result);
     }
 
-    [Test]
-    public void BS016_should_return_true_when_there_is_no_vlan_1_configured_and_test_script_without_SSH_HOSTNAME_being_prepend_to_test_commands() {
-      var blob = new AssetBlob {
-        Body = @"show vlan brief
+//    [Test]
+//    public void BS016_should_return_true_when_there_is_no_vlan_1_configured_and_test_script_without_SSH_HOSTNAME_being_prepend_to_test_commands() {
+//      var blob = new AssetBlob {
+//        Body = @"show vlan brief
 
-System-max vlan Params: Max(4095) Default(64) Current(255)
-Default vlan Id :1
-Total Number of Vlan Configured :19
-VLANs Configured :1 99 240 to 249 340 540 to 541 604 926 933 936
+//System-max vlan Params: Max(4095) Default(64) Current(255)
+//Default vlan Id :1
+//Total Number of Vlan Configured :19
+//VLANs Configured :1 99 240 to 249 340 540 to 541 604 926 933 936
 
-show vlan
-Total PORT-VLAN entries: 19
-Maximum PORT-VLAN entries: 255
+//show vlan
+//Total PORT-VLAN entries: 19
+//Maximum PORT-VLAN entries: 255
 
-Legend: [Stk=Stack-Id, S=Slot]
-PORT-VLAN 2, Name DEFAULT-VLAN, Priority level0, Spanning tree Off
- Untagged Ports: (U1/M1)  13  14  15  16  17  18  19  20  21  22  23  24
- Untagged Ports: (U1/M1)  25  26  27  28  29  30  31  32  33  34  35  36
- Untagged Ports: (U1/M1)  37  38  39  40  41  42  43  44  45  46  47  48
+//Legend: [Stk=Stack-Id, S=Slot]
+//PORT-VLAN 2, Name DEFAULT-VLAN, Priority level0, Spanning tree Off
+// Untagged Ports: (U1/M1)  13  14  15  16  17  18  19  20  21  22  23  24
+// Untagged Ports: (U1/M1)  25  26  27  28  29  30  31  32  33  34  35  36
+// Untagged Ports: (U1/M1)  37  38  39  40  41  42  43  44  45  46  47  48
 
- Untagged Ports: (U1/M2)   1   2
-   Tagged Ports: None
-   Uplink Ports: None
- DualMode Ports: None
- Mac-Vlan Ports: None
-     Monitoring: Disabled
+// Untagged Ports: (U1/M2)   1   2
+//   Tagged Ports: None
+//   Uplink Ports: None
+// DualMode Ports: None
+// Mac-Vlan Ports: None
+//     Monitoring: Disabled
 
-PORT-VLAN 99, Name U_MANAGEMENT, Priority level0, Spanning tree On
- Untagged Ports: None
-   Tagged Ports: (U1/M1)   1   2
-   Uplink Ports: None
- DualMode Ports: None
- Mac-Vlan Ports: None
-     Monitoring: Disabled
+//PORT-VLAN 99, Name U_MANAGEMENT, Priority level0, Spanning tree On
+// Untagged Ports: None
+//   Tagged Ports: (U1/M1)   1   2
+//   Uplink Ports: None
+// DualMode Ports: None
+// Mac-Vlan Ports: None
+//     Monitoring: Disabled
 
-PORT-VLAN 940, Name U_COI_DMS_940, Priority level0, Spanning tree On
- Untagged Ports: None
-   Tagged Ports: (U1/M1)   1   2
-   Uplink Ports: None
- DualMode Ports: None
- Mac-Vlan Ports: None
-     Monitoring: Disabled
+//PORT-VLAN 940, Name U_COI_DMS_940, Priority level0, Spanning tree On
+// Untagged Ports: None
+//   Tagged Ports: (U1/M1)   1   2
+//   Uplink Ports: None
+// DualMode Ports: None
+// Mac-Vlan Ports: None
+//     Monitoring: Disabled
 
-show vlan | include Name
-Total PORT-VLAN entries: 19
-Maximum PORT-VLAN entries: 255
+//show vlan | include Name
+//Total PORT-VLAN entries: 19
+//Maximum PORT-VLAN entries: 255
 
-Legend: [Stk=Stack-Id, S=Slot]
-"
-      };
-      INMCIBOSDevice device = new NMCIBOSDevice(blob);
-      ISTIGItem item = new BS016(device);
+//Legend: [Stk=Stack-Id, S=Slot]
+//"
+//      };
+//      INMCIBOSDevice device = new NMCIBOSDevice(blob);
+//      ISTIGItem item = new BS016(device);
 
-      try {
-        var result = item.Compliant();
-      } catch (System.Exception) {
-      }
+//      try {
+//        var result = item.Compliant();
+//      } catch (System.Exception) {
+//      }
 
-      Assert.Ignore();
-    }
+//      Assert.Ignore();
+//    }
 
     [Test]
     public void BS016_should_return_false_when_vlan_1_is_configured_and_there_are_tagged_ports() {

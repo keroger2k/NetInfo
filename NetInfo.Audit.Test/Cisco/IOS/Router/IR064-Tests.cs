@@ -16,7 +16,7 @@ snmp-server group nmcigroup v3 priv write NMS notify *tv.FFFFFFFF.FFFFFFFF.FFFFF
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR064(device);
+      ISTIGItem item = new NET1665(device);
 
       var result = item.Compliant();
 
@@ -33,7 +33,7 @@ snmp-server community sPWx4$sC9!wE RO 99"
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR064(device);
+      ISTIGItem item = new NET1665(device);
 
       var result = item.Compliant();
 

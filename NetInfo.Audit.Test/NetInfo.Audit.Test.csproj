@@ -139,15 +139,12 @@
     <Compile Include="Cisco\IOS\Router\IR056-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR057-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR058-Tests.cs" />
-    <Compile Include="Cisco\IOS\Router\IR059-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR060-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR061-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR064-Tests.cs" />
-    <Compile Include="Cisco\IOS\Router\IR065-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR066-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR067-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR068-Tests.cs" />
-    <Compile Include="Cisco\IOS\Router\IR070-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR071-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR079-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR080-Tests.cs" />

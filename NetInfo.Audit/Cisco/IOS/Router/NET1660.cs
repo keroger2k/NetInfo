@@ -1,4 +1,5 @@
 ﻿using NetInfo.Devices.IOS;
+using System;
 using System.Linq;
 
 namespace NetInfo.Audit.Cisco.IOS.Router
@@ -25,20 +26,30 @@ namespace NetInfo.Audit.Cisco.IOS.Router
 
         public bool Compliant()
         {
-            bool compliant = false;
+            bool result1 = false;
+            bool result2 = false;
+
             if (_device.ShowSnmpUser.UserSettings != null && _device.ShowSnmpUser.UserSettings.Any(c => !string.IsNullOrEmpty(c.PrivacyProtocol)))
             {
-                compliant = _device.ShowSnmpUser.UserSettings.All(c => approvedProtocols.Contains(c.PrivacyProtocol));
+                result1 = _device.ShowSnmpUser.UserSettings.All(c => approvedProtocols.Contains(c.PrivacyProtocol));
             }
             else
             {
-                compliant =
+                result1 =
                   _device.SNMPSettings.Servers.Any() &&
                   _device.SNMPSettings.Servers.All(c => c.VersionKeyword.Equals("priv", System.StringComparison.OrdinalIgnoreCase)) &&
                   _device.SNMPSettings.Groups != null &&
                   _device.SNMPSettings.Groups.All(c => c.VerionKeyword.Equals("priv", System.StringComparison.OrdinalIgnoreCase));
             }
-            return compliant;
+
+            if (_device.ShowSnmpUser.UserSettings != null)
+            {
+                result2 = _device.ShowSnmpUser.UserSettings
+                  .All(c => c.AuthenticationProtocol != null && (c.AuthenticationProtocol.Equals("sha", StringComparison.OrdinalIgnoreCase) ||
+                       c.AuthenticationProtocol.Equals("md5", StringComparison.OrdinalIgnoreCase)));
+            }
+
+            return result1 && result2;
         }
     }
 }

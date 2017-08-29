@@ -26,6 +26,7 @@ namespace NetInfo.Audit.Cisco.IOS.Router
 
         public bool Compliant()
         {
+            if (_device.SNMPSettings.TrapSource == null) return false;
 
             string loopbackName = _sourceInterfaceRegex.Match(_device.SNMPSettings.TrapSource).Groups["sourceInterface"].ToString();
 

@@ -180,16 +180,18 @@ snmp-server host 10.32.9.244 inform version 3 priv nmsops
 
 PRLH-U00-BI-01#show snmp user
 User name: nmsops
-Engine ID: 00000063000100A20A2009E0
+Engine ID: 00000063000100A20A00108A
 storage-type: nonvolatile	 active	access-list: 69
+Authentication Protocol: MD5
+Privacy Protocol: AES
+Group-name: nmcigroup
 
 User name: nmsops
-Engine ID: 00000063000100A20A2009E2
+Engine ID: 00000063000100A20A101B3E
 storage-type: nonvolatile	 active	access-list: 69
-
-User name: nmsops
-Engine ID: 8000000903000008E21893C0
-storage-type: nonvolatile	 active	access-list: 69
+Authentication Protocol: MD5
+Privacy Protocol: AES
+Group-name: nmcigroup
 
 PRLH-U00-BI-01#!
 "
@@ -215,16 +217,18 @@ snmp-server host 10.32.9.244 inform version 3 priv nmsops
 
 PRLH-U00-BI-01#show snmp user
 User name: nmsops
-Engine ID: 00000063000100A20A2009E0
+Engine ID: 00000063000100A20A00108A
 storage-type: nonvolatile	 active	access-list: 69
-
-User name: fail
-Engine ID: 00000063000100A20A2009E2
-storage-type: nonvolatile	 active	access-list: 69
+Authentication Protocol: MD5
+Privacy Protocol: AES
+Group-name: nmcigroup
 
 User name: nmsops
-Engine ID: 8000000903000008E21893C0
+Engine ID: 00000063000100A20A101B3E
 storage-type: nonvolatile	 active	access-list: 69
+Authentication Protocol: MD5
+Privacy Protocol: AES
+Group-name: nmcigroup
 
 PRLH-U00-BI-01#!
 "
