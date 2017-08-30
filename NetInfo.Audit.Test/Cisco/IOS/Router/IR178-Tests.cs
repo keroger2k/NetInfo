@@ -21,7 +21,7 @@ ntp server 10.0.16.10 key 1
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR178(device);
+      ISTIGItem item = new NET0813(device);
 
       var result = item.Compliant();
 
@@ -40,7 +40,7 @@ ntp server 10.0.16.10 key 1
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR178(device);
+      ISTIGItem item = new NET0813(device);
 
       var result = item.Compliant();
 
@@ -57,7 +57,7 @@ ntp server 10.0.16.10
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR178(device);
+      ISTIGItem item = new NET0813(device);
 
       var result = item.Compliant();
 
@@ -76,7 +76,7 @@ ntp server 10.0.16.10 key 1
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR178(device);
+      ISTIGItem item = new NET0813(device);
 
       var result = item.Compliant();
 

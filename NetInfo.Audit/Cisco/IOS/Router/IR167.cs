@@ -17,7 +17,7 @@ namespace NetInfo.Audit.Cisco.IOS.Router {
 
     public IDevice Device { get; private set; }
 
-    private static readonly string[] ApprovedSources = { "Vlan23", "Vlan51", "Vlan56" };
+    private static readonly string[] ApprovedSources = { "Loopback0" };
 
     public IR167(INMCIIOSDevice device) {
       this.Device = device;

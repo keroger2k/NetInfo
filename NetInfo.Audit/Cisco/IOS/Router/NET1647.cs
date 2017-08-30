@@ -5,24 +5,24 @@ namespace NetInfo.Audit.Cisco.IOS.Router
     /// <summary>
     /// Infrastructure Router Security Technical Implementation Guide Cisco :: Release: 23 Benchmark Date: 28 Jul 2017
     /// 
-    /// Rule Title:  
-    /// STIG ID:	     
-    /// Rule ID:	SV-
-    /// Vuln ID:	V-       
-    /// Severity:	CAT I  Class:	Unclass
+    /// Rule Title:  The network element must not use SSH Version 1 for administrative access.
+    /// STIG ID:	NET1647     
+    /// Rule ID:	SV-15460r2_rule
+    /// Vuln ID:	V-14717       
+    /// Severity:	CAT II  Class:	Unclass
     /// </summary>
-    public class IR190 : ISTIGItem
+    public class NET1647 : ICiscoRouterSecurityItem
     {
         private IIOSDevice _device;
 
-        public IR190(IIOSDevice device)
+        public NET1647(IIOSDevice device)
         {
             this._device = device;
         }
 
         public bool Compliant()
         {
-            return !_device.IPSettings.SecureHttpServer;
+            return _device.IPSettings.SSH.Version == 2;
         }
     }
 }

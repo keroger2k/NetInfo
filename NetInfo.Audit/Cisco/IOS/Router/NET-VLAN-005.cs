@@ -27,7 +27,8 @@ namespace NetInfo.Audit.Cisco.IOS.Router
             var a = _device.Interfaces.Where(c => c.Physical);
             var b = a.Where(c => c.SwitchPort.Type == IOSInterface.SwitchPortSettings.PortType.Trunk);
             var d = !b.Any() || b.Any(c => !c.SwitchPort.AllowedVlans.Contains(1));
-            return d;
+            var e = !_device.Interfaces.Any(c => c.SwitchPort.Type == IOSInterface.SwitchPortSettings.PortType.Access && c.Vlan == 1);
+            return d && e;
         }
     }
 }

@@ -60,16 +60,16 @@ namespace NetInfo.Parse
                //     Debug.WriteLine(string.Format("Device: {0} is {1}", device.Hostname, query.Compliant() ? "PASSING" : "FAILING"));
             }
 
-            Debug.WriteLine(string.Format("{0},{1},{2}",
-                t.ToString(),
-                results.Count(c => c.Item1.Equals("PASSING", StringComparison.CurrentCultureIgnoreCase)),
-                results.Count(c => c.Item1.Equals("FAILING", StringComparison.CurrentCultureIgnoreCase))
-             ));
+            //Debug.WriteLine(string.Format("{0},{1},{2}",
+            //    t.ToString(),
+            //    results.Count(c => c.Item1.Equals("PASSING", StringComparison.CurrentCultureIgnoreCase)),
+            //    results.Count(c => c.Item1.Equals("FAILING", StringComparison.CurrentCultureIgnoreCase))
+            // ));
 
-            //foreach(var device in results.Where(c => c.Item1.Equals("FAILING", StringComparison.CurrentCultureIgnoreCase)).Take(5))
-            //{
-            //    Debug.WriteLine(string.Format("Failing Device: {0}", device.Item2));
-            //}
+            foreach (var device in results)
+            {
+                Debug.WriteLine(string.Format("{0}, {1}, {2}", t.ToString(), device.Item1, device.Item2));
+            }
 
             //foreach (var device in results.Where(c => c.Item1.Equals("PASSING", StringComparison.CurrentCultureIgnoreCase)).Take(5))
             //{

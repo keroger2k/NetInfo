@@ -146,10 +146,7 @@
     <Compile Include="Cisco\IOS\Router\IR067-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR068-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR071-Tests.cs" />
-    <Compile Include="Cisco\IOS\Router\IR079-Tests.cs" />
-    <Compile Include="Cisco\IOS\Router\IR080-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR087-Tests.cs" />
-    <Compile Include="Cisco\IOS\Router\IR088-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR093-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR094-Tests.cs" />
     <Compile Include="Cisco\IOS\Router\IR096-Tests.cs" />
@@ -244,7 +241,6 @@
     <Compile Include="Cisco\IOS\Switch\IS071-Tests.cs" />
     <Compile Include="Cisco\IOS\Switch\IS075-Tests.cs" />
     <Compile Include="Cisco\IOS\Switch\IS082-Tests.cs" />
-    <Compile Include="Cisco\IOS\Switch\IS083-Tests.cs" />
     <Compile Include="Cisco\IOS\Switch\IS090-Tests.cs" />
     <Compile Include="Cisco\IOS\Switch\IS092-Tests.cs" />
     <Compile Include="Cisco\IOS\Switch\IS093-Tests.cs" />
