@@ -23,20 +23,6 @@ namespace NetInfo.Audit.Cisco.IOS.Router
             this._device = device;
         }
 
-        public string Source => throw new NotImplementedException();
-
-        public string Title => throw new NotImplementedException();
-
-        public string STIGId => throw new NotImplementedException();
-
-        public string RuleId => throw new NotImplementedException();
-
-        public string VulnId => throw new NotImplementedException();
-
-        public STIGSeverity Severity => throw new NotImplementedException();
-
-        public STIGClassification Class => throw new NotImplementedException();
-
         public bool Compliant()
         {
             return !_device.IPSettings.Finger;

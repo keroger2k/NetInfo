@@ -1,5 +1,6 @@
 ﻿using NetInfo.Audit;
 using NetInfo.Devices;
+using NetInfo.Devices.Cisco.IOS;
 using NetInfo.Devices.IOS;
 using System;
 using System.Collections.Generic;
@@ -27,13 +28,15 @@ namespace NetInfo.Parse
                 var asset = new AssetBlob();
                 asset.Body = File.ReadAllText(FI.FullName);
                 _assets.Add(asset);
-             }
+            }
             Debug.WriteLine("Finished.  Found {0} device(s) configurations...", _assets.Count);
 
-            Audit();
+            //Audit();
+            Audit("IR056");
+            //GenerateScripts();
         }
 
-        public static void Audit()
+        private static void Audit()
         {
             Debug.WriteLine("Checking for available STIGs to run...");
             var instances = Assembly.GetAssembly(typeof(ICiscoRouterSecurityItem))
@@ -47,6 +50,17 @@ namespace NetInfo.Parse
             }
         }
 
+        private static void Audit(string check)
+        {
+            Debug.WriteLine("Checking for available STIGs to run...");
+            var instance = Assembly.GetAssembly(typeof(ICiscoRouterSecurityItem))
+              .GetTypes()
+              .Where(t => t.GetInterfaces().Contains(typeof(ICiscoRouterSecurityItem)))
+              .FirstOrDefault(c => c.ToString().Contains(check));
+            Debug.WriteLine("Finished.  Found {0} STIG to check...", check);
+            CheckItem(instance);
+        }
+
         private static void CheckItem(Type t)
         {
             List<Tuple<string, string>> results = new List<Tuple<string, string>>();
@@ -56,8 +70,8 @@ namespace NetInfo.Parse
                 var device = new IOSDevice(asset);
                 ICiscoRouterSecurityItem query = (ICiscoRouterSecurityItem)Activator.CreateInstance(t, device);
                 results.Add(new Tuple<string, string>(query.Compliant() ? "PASSING" : "FAILING", device.Hostname));
-               // if(!query.Compliant())
-               //     Debug.WriteLine(string.Format("Device: {0} is {1}", device.Hostname, query.Compliant() ? "PASSING" : "FAILING"));
+                // if(!query.Compliant())
+                //     Debug.WriteLine(string.Format("Device: {0} is {1}", device.Hostname, query.Compliant() ? "PASSING" : "FAILING"));
             }
 
             //Debug.WriteLine(string.Format("{0},{1},{2}",
@@ -75,6 +89,57 @@ namespace NetInfo.Parse
             //{
             //    Debug.WriteLine(string.Format("Passing Device: {0}", device.Item2));
             //}
+        }
+
+        private static void GenerateScripts()
+        {
+            foreach (var asset in _assets)
+            {
+                OSPFCostScript.GenerateScript(new IOSDevice(asset));
+            }
+        }
+    }
+
+    public class OSPFCostScript
+    {
+        public static void GenerateScript(IIOSDevice device)
+        {
+            var configuredInterfaces = new List<IOSInterface>();
+
+            foreach (var link in device.Interfaces)
+            {
+                if (link.IP.OSPF != null && link.IP.OSPF.Cost != 0)
+                {
+                    configuredInterfaces.Add(link);
+                }
+            }
+
+            if (configuredInterfaces.Any())
+            {
+                Debug.WriteLine("--------------------------------------------------");
+                Debug.WriteLine(string.Format("{0}", device.Hostname));
+                Debug.WriteLine("--------------------------------------------------");
+                Debug.WriteLine("!\n!\n!\n!");
+                Debug.WriteLine("config t");
+                Debug.WriteLine("!\n!\n!\n!");
+
+                foreach (var i in configuredInterfaces)
+                {
+                    Debug.WriteLine(string.Format("interface {0}", i.ShortName));
+                    Debug.WriteLine(string.Format(" no ip ospf cost {0}", i.IP.OSPF.Cost));
+                    Debug.WriteLine(" no ip ospf cost");
+                    Debug.WriteLine("!");
+                }
+
+                Debug.WriteLine(string.Format("router ospf {0}", device.OSPF.ProcessId));
+                Debug.WriteLine(string.Format("auto-cost reference-bandwidth 1000"));
+                Debug.WriteLine("!");
+
+                Debug.WriteLine("end");
+                Debug.WriteLine("!\n!\n!\n!");
+                Debug.WriteLine("write mem");
+                Debug.WriteLine("!\n!\n!\n!");
+            }
         }
     }
 }
