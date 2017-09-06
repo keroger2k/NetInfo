@@ -83,6 +83,7 @@
     <Compile Include="Cisco\IOS\Classes\Commands\ShowInterfacesTrunk.cs" />
     <Compile Include="Cisco\IOS\Classes\Commands\ShowInventory.cs" />
     <Compile Include="Cisco\IOS\Classes\Commands\ShowIpInterface.cs" />
+    <Compile Include="Cisco\IOS\Classes\Commands\ShowIpRoute.cs" />
     <Compile Include="Cisco\IOS\Classes\Commands\ShowSnmp.cs" />
     <Compile Include="Cisco\IOS\Classes\Commands\ShowSnmpGroup.cs" />
     <Compile Include="Cisco\IOS\Classes\Commands\ShowSnmpUser.cs" />

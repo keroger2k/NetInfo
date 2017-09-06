@@ -82,6 +82,7 @@
     <Compile Include="Cisco\IOS\ServiceSettingsTests.cs" />
     <Compile Include="Cisco\IOS\ShowCdpInterfaceTests.cs" />
     <Compile Include="Cisco\IOS\ShowCdpNeighborsTests.cs" />
+    <Compile Include="Cisco\IOS\ShowIpRouteTests.cs" />
     <Compile Include="Cisco\IOS\ShowInterfaceStatusTests.cs" />
     <Compile Include="Cisco\IOS\ShowInterfaceTests.cs" />
     <Compile Include="Cisco\IOS\ShowInventoryTests.cs" />

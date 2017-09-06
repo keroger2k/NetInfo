@@ -1,4 +1,5 @@
 ﻿using NetInfo.Devices;
+using NetInfo.Devices.IOS;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -29,7 +30,23 @@ namespace NetInfo.Parse
             //auditEngine.AuditItem("IR056");
 
             //scriptGen.CheckOSPFInterfaces();
-            scriptGen.CheckInterfacesIP();
+            //scriptGen.CheckInterfacesIP();
+
+            foreach(var asset in _assets)
+            {
+                var device = new IOSDevice(asset);
+                if(device.ShowIpRoute.GatewayLastResort != null)
+                {
+                    Debug.WriteLine(string.Format(@"Device: {0}, Gateway: {1} to network {2}",
+                        device.Hostname,
+                        device.ShowIpRoute.GatewayLastResort.NextHop,
+                        device.ShowIpRoute.GatewayLastResort.Network));
+
+                }
+
+                //Debug.WriteLine(string.Format(@"Device: {0}, Gateway of last resort is not set",
+                //        device.Hostname));
+            }
 
             //scriptGen.GenerateScripts();
         }

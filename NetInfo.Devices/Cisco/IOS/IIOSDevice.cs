@@ -3,118 +3,122 @@ using NetInfo.Devices.Cisco.IOS;
 using NetInfo.Devices.Cisco.IOS.Classes;
 using NetInfo.Devices.Cisco.IOS.Classes.Commands;
 
-namespace NetInfo.Devices.IOS {
+namespace NetInfo.Devices.IOS
+{
 
-  public interface IIOSDevice : IDevice {
+    public interface IIOSDevice : IDevice
+    {
 
-    string Model { get; }
+        string Model { get; }
 
-    string Domain { get; }
+        string Domain { get; }
 
-    string CryptoKeyName { get; }
+        string CryptoKeyName { get; }
 
-    string TacacsSourceInterface { get; }
+        string TacacsSourceInterface { get; }
 
-    bool IsManaged { get; }
+        bool IsManaged { get; }
 
-    bool IsODMNEnabled { get; }
+        bool IsODMNEnabled { get; }
 
-    IOSClock Clock { get; }
+        IOSClock Clock { get; }
 
-    IOSImage Image { get; }
+        IOSImage Image { get; }
 
-    IOSPassword EnableSecret { get; }
+        IOSPassword EnableSecret { get; }
 
-    IEnumerable<IOSLineItem> Lines { get; }
+        IEnumerable<IOSLineItem> Lines { get; }
 
-    IEnumerable<IOSRadiusServer> RadiusServers { get; }
+        IEnumerable<IOSRadiusServer> RadiusServers { get; }
 
-    IEnumerable<IOSInterface> Interfaces { get; }
+        IEnumerable<IOSInterface> Interfaces { get; }
 
-    IEnumerable<Vlan> Vlans { get; }
+        IEnumerable<Vlan> Vlans { get; }
 
-    IEnumerable<string> Banner { get; }
+        IEnumerable<string> Banner { get; }
 
-    SNMPSettings SNMPSettings { get; }
+        SNMPSettings SNMPSettings { get; }
 
-    bool BootNetwork { get; }
+        bool BootNetwork { get; }
 
-    bool ServiceConfig { get; }
+        bool ServiceConfig { get; }
 
-    IPSettings IPSettings { get; }
+        IPSettings IPSettings { get; }
 
-    LoggingSettings SyslogSettings { get; }
+        LoggingSettings SyslogSettings { get; }
 
-    Dot1xSettings Dot1xSettings { get; }
+        Dot1xSettings Dot1xSettings { get; }
 
-    AliasExecSettings AliasExecSettings { get; }
+        AliasExecSettings AliasExecSettings { get; }
 
-    ServiceSettings ServiceSettings { get; }
+        ServiceSettings ServiceSettings { get; }
 
-    TacacsSettings TacacsServer { get; }
+        TacacsSettings TacacsServer { get; }
 
-    NTPSettings NetworkTimeProtocol { get; }
+        NTPSettings NetworkTimeProtocol { get; }
 
-    AAASettings AAA { get; }
+        AAASettings AAA { get; }
 
-    CryptoSettings Crypto { get; }
+        CryptoSettings Crypto { get; }
 
-    UserSettings UserSettings { get; }
+        UserSettings UserSettings { get; }
 
-    MonitorSettings MonitorSettings { get; }
+        MonitorSettings MonitorSettings { get; }
 
-    SpanningTreeSettings SpanningTree { get; }
+        SpanningTreeSettings SpanningTree { get; }
 
-    bool VStackEnabled { get; }
+        bool VStackEnabled { get; }
 
-    IEnumerable<ExtendedAccessList> ExtendedAccessLists { get; }
+        IEnumerable<ExtendedAccessList> ExtendedAccessLists { get; }
 
-    IEnumerable<StandardAccessList> StandardAccessLists { get; }
+        IEnumerable<StandardAccessList> StandardAccessLists { get; }
 
-    IEnumerable<RouteMap> RouteMaps { get; }
+        IEnumerable<RouteMap> RouteMaps { get; }
 
-    bool IsBGPConfigured { get; }
+        bool IsBGPConfigured { get; }
 
-    bool IsEIGRPConfigured { get; }
+        bool IsEIGRPConfigured { get; }
 
-    bool IsOSPFConfigured { get; }
+        bool IsOSPFConfigured { get; }
 
-    BorderGatewayProtocol BGP { get; }
+        BorderGatewayProtocol BGP { get; }
 
-    OpenShortestPathFirstProtocol OSPF { get; }
+        OpenShortestPathFirstProtocol OSPF { get; }
 
-    EnhancedInteriorGatewayRoutingProtocol EIGRP { get; }
+        EnhancedInteriorGatewayRoutingProtocol EIGRP { get; }
 
-    ShowInterfaceStatus ShowInterfaceStatus { get; }
+        ShowInterfaceStatus ShowInterfaceStatus { get; }
 
-    ShowInterface ShowInterface { get; }
+        ShowInterface ShowInterface { get; }
 
-    ShowInterfacesTrunk ShowInterfacesTrunk { get; }
+        ShowInterfacesTrunk ShowInterfacesTrunk { get; }
 
-    ShowSnmpUser ShowSnmpUser { get; }
+        ShowSnmpUser ShowSnmpUser { get; }
 
-    ShowSnmpGroup ShowSnmpGroup { get; }
+        ShowSnmpGroup ShowSnmpGroup { get; }
 
-    ShowSnmp ShowSnmp { get; }
+        ShowSnmp ShowSnmp { get; }
 
-    ShowClock ShowClock { get; }
+        ShowClock ShowClock { get; }
 
-    ShowIpInterface ShowIpInterface { get; }
+        ShowIpInterface ShowIpInterface { get; }
 
-    ShowVersion ShowVersion { get; }
+        ShowIpRoute ShowIpRoute { get; }
 
-    ShowVtpPassword ShowVtpPassword { get; }
+        ShowVersion ShowVersion { get; }
 
-    ShowVtpStatus ShowVtpStatus { get; }
+        ShowVtpPassword ShowVtpPassword { get; }
 
-    ShowInventory ShowInventory { get; }
+        ShowVtpStatus ShowVtpStatus { get; }
 
-    ShowCdpInterface ShowCdpInterface { get; }
+        ShowInventory ShowInventory { get; }
 
-    ShowCdpNeighbor ShowCdpNeighbors { get; }
+        ShowCdpInterface ShowCdpInterface { get; }
 
-    DirAllFileSystems DirAllFileSystems { get; }
+        ShowCdpNeighbor ShowCdpNeighbors { get; }
 
-    WriteMem WriteMem { get; }
-  }
+        DirAllFileSystems DirAllFileSystems { get; }
+
+        WriteMem WriteMem { get; }
+    }
 }

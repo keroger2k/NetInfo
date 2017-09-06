@@ -43,7 +43,7 @@ access-list 99 deny any log
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR056(device, approvedAcl);
+      ISTIGItem item = new IR056(device);
 
       var result = item.Compliant();
 
@@ -66,7 +66,7 @@ access-list 99 deny any log
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR056(device, approvedAcl);
+      ISTIGItem item = new IR056(device);
 
       var result = item.Compliant();
 
@@ -90,7 +90,7 @@ access-list 99 deny   any log
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR056(device, approvedAcl);
+      ISTIGItem item = new IR056(device);
 
       var result = item.Compliant();
 
@@ -114,7 +114,7 @@ access-list 99 deny   any log
       };
 
       INMCIIOSDevice device = new NMCIIOSDevice(blob);
-      ISTIGItem item = new IR056(device, approvedAcl);
+      ISTIGItem item = new IR056(device);
 
       var result = item.Compliant();
 
