@@ -26,7 +26,10 @@ namespace NetInfo.Parse
             var scriptGen = new OSPFCostScript(_assets);
 
             //auditEngineAuditAll();
-            auditEngine.AuditItem("IR056");
+            //auditEngine.AuditItem("IR056");
+
+            //scriptGen.CheckOSPFInterfaces();
+            scriptGen.CheckInterfacesIP();
 
             //scriptGen.GenerateScripts();
         }

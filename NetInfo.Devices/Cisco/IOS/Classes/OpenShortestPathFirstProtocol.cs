@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text.RegularExpressions;
 
 namespace NetInfo.Devices.Cisco.IOS
@@ -34,5 +35,36 @@ namespace NetInfo.Devices.Cisco.IOS
                 return r == null ? new List<string>() : r.Select(c => c.Groups["interface"].Value);
             }
         }
+
+        public IEnumerable<string> PassiveInterfaces
+        {
+            get
+            {
+                var r = GetSettings(new Regex(@"^\s+passive-interface (?<interface>.*)", RegexOptions.IgnoreCase));
+                return r == null ? new List<string>() : r.Select(c => c.Groups["interface"].Value);
+            }
+        }
+
+        public IEnumerable<OSPFNetworkCommand> Networks
+        {
+            get
+            {
+                var r = GetSettings(new Regex(@"\s+network (?<network>.*) (?<mask>.*) area (?<area>.*)", RegexOptions.IgnoreCase));
+                return r == null ? new List<OSPFNetworkCommand>() : r.Select(c => new OSPFNetworkCommand
+                {
+                    Network = IPAddress.Parse(c.Groups["network"].Value),
+                    InverseMask = IPAddress.Parse(c.Groups["mask"].Value),
+                    Area = c.Groups["area"].Value
+                });
+            }
+        }
+
+        public class OSPFNetworkCommand
+        {
+            public IPAddress Network { get; set; }
+            public IPAddress InverseMask { get; set; }
+            public string Area { get; set; }
+        }
+
     }
 }
