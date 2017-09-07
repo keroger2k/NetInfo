@@ -1,4 +1,5 @@
 ﻿using NetInfo.Devices;
+using System.Linq;
 using NetInfo.Devices.IOS;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -35,12 +36,15 @@ namespace NetInfo.Parse
             foreach(var asset in _assets)
             {
                 var device = new IOSDevice(asset);
-                if(device.ShowIpRoute.GatewayLastResort != null)
+                if(device.ShowIpRoute.RouteTableNetorks.Any())
                 {
-                    Debug.WriteLine(string.Format(@"Device: {0}, Gateway: {1} to network {2}",
-                        device.Hostname,
-                        device.ShowIpRoute.GatewayLastResort.NextHop,
-                        device.ShowIpRoute.GatewayLastResort.Network));
+                    foreach(var route in device.ShowIpRoute.RouteTableNetorks)
+                    {
+                        Debug.WriteLine(string.Format(@"Device: {0}, Route: {1}/{2}",
+                            device.Hostname,
+                            route.Network,
+                            route.CIDRMask));
+                    }
 
                 }
 
